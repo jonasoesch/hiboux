@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDAFC4D4181E6080001D5ECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D3181E6080001D5ECA /* Foundation.framework */; };
+		DDAFC4D6181E6080001D5ECA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */; };
+		DDAFC4D8181E6080001D5ECA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D7181E6080001D5ECA /* UIKit.framework */; };
+		DDAFC4DE181E6080001D5ECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4DC181E6080001D5ECA /* InfoPlist.strings */; };
+		DDAFC4E0181E6080001D5ECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4DF181E6080001D5ECA /* main.m */; };
+		DDAFC4E4181E6080001D5ECA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4E3181E6080001D5ECA /* AppDelegate.m */; };
+		DDAFC4E7181E6080001D5ECA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */; };
+		DDAFC4EA181E6080001D5ECA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4E8181E6080001D5ECA /* Main_iPad.storyboard */; };
+		DDAFC4ED181E6080001D5ECA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4EC181E6080001D5ECA /* ViewController.m */; };
+		DDAFC4EF181E6080001D5ECA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4EE181E6080001D5ECA /* Images.xcassets */; };
+		DDAFC4F6181E6080001D5ECA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4F5181E6080001D5ECA /* XCTest.framework */; };
+		DDAFC4F7181E6080001D5ECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D3181E6080001D5ECA /* Foundation.framework */; };
+		DDAFC4F8181E6080001D5ECA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D7181E6080001D5ECA /* UIKit.framework */; };
+		DDAFC500181E6080001D5ECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */; };
+		DDAFC502181E6080001D5ECA /* hibouxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC501181E6080001D5ECA /* hibouxTests.m */; };
+		DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDAFC4F9181E6080001D5ECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDAFC4C8181E6080001D5ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDAFC4CF181E6080001D5ECA;
+			remoteInfo = hiboux;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DDAFC4D0181E6080001D5ECA /* hiboux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiboux.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAFC4D3181E6080001D5ECA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DDAFC4D7181E6080001D5ECA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DDAFC4DB181E6080001D5ECA /* hiboux-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hiboux-Info.plist"; sourceTree = "<group>"; };
+		DDAFC4DD181E6080001D5ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDAFC4DF181E6080001D5ECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDAFC4E1181E6080001D5ECA /* hiboux-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hiboux-Prefix.pch"; sourceTree = "<group>"; };
+		DDAFC4E2181E6080001D5ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DDAFC4E3181E6080001D5ECA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DDAFC4E6181E6080001D5ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		DDAFC4E9181E6080001D5ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		DDAFC4EB181E6080001D5ECA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DDAFC4EC181E6080001D5ECA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DDAFC4EE181E6080001D5ECA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DDAFC4F4181E6080001D5ECA /* hibouxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hibouxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAFC4F5181E6080001D5ECA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DDAFC4FD181E6080001D5ECA /* hibouxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hibouxTests-Info.plist"; sourceTree = "<group>"; };
+		DDAFC4FF181E6080001D5ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDAFC501181E6080001D5ECA /* hibouxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hibouxTests.m; sourceTree = "<group>"; };
+		DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLAddOwlViewController.h; sourceTree = "<group>"; };
+		DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLAddOwlViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDAFC4CD181E6080001D5ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAFC4D6181E6080001D5ECA /* CoreGraphics.framework in Frameworks */,
+				DDAFC4D8181E6080001D5ECA /* UIKit.framework in Frameworks */,
+				DDAFC4D4181E6080001D5ECA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAFC4F1181E6080001D5ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAFC4F6181E6080001D5ECA /* XCTest.framework in Frameworks */,
+				DDAFC4F8181E6080001D5ECA /* UIKit.framework in Frameworks */,
+				DDAFC4F7181E6080001D5ECA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDAFC4C7181E6080001D5ECA = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4D9181E6080001D5ECA /* hiboux */,
+				DDAFC4FB181E6080001D5ECA /* hibouxTests */,
+				DDAFC4D2181E6080001D5ECA /* Frameworks */,
+				DDAFC4D1181E6080001D5ECA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDAFC4D1181E6080001D5ECA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4D0181E6080001D5ECA /* hiboux.app */,
+				DDAFC4F4181E6080001D5ECA /* hibouxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDAFC4D2181E6080001D5ECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4D3181E6080001D5ECA /* Foundation.framework */,
+				DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */,
+				DDAFC4D7181E6080001D5ECA /* UIKit.framework */,
+				DDAFC4F5181E6080001D5ECA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDAFC4D9181E6080001D5ECA /* hiboux */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4E2181E6080001D5ECA /* AppDelegate.h */,
+				DDAFC4E3181E6080001D5ECA /* AppDelegate.m */,
+				DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */,
+				DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */,
+				DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */,
+				DDAFC4E8181E6080001D5ECA /* Main_iPad.storyboard */,
+				DDAFC4EB181E6080001D5ECA /* ViewController.h */,
+				DDAFC4EC181E6080001D5ECA /* ViewController.m */,
+				DDAFC4EE181E6080001D5ECA /* Images.xcassets */,
+				DDAFC4DA181E6080001D5ECA /* Supporting Files */,
+			);
+			path = hiboux;
+			sourceTree = "<group>";
+		};
+		DDAFC4DA181E6080001D5ECA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4DB181E6080001D5ECA /* hiboux-Info.plist */,
+				DDAFC4DC181E6080001D5ECA /* InfoPlist.strings */,
+				DDAFC4DF181E6080001D5ECA /* main.m */,
+				DDAFC4E1181E6080001D5ECA /* hiboux-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDAFC4FB181E6080001D5ECA /* hibouxTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC501181E6080001D5ECA /* hibouxTests.m */,
+				DDAFC4FC181E6080001D5ECA /* Supporting Files */,
+			);
+			path = hibouxTests;
+			sourceTree = "<group>";
+		};
+		DDAFC4FC181E6080001D5ECA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4FD181E6080001D5ECA /* hibouxTests-Info.plist */,
+				DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDAFC4CF181E6080001D5ECA /* hiboux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAFC505181E6080001D5ECA /* Build configuration list for PBXNativeTarget "hiboux" */;
+			buildPhases = (
+				DDAFC4CC181E6080001D5ECA /* Sources */,
+				DDAFC4CD181E6080001D5ECA /* Frameworks */,
+				DDAFC4CE181E6080001D5ECA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hiboux;
+			productName = hiboux;
+			productReference = DDAFC4D0181E6080001D5ECA /* hiboux.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDAFC4F3181E6080001D5ECA /* hibouxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAFC508181E6080001D5ECA /* Build configuration list for PBXNativeTarget "hibouxTests" */;
+			buildPhases = (
+				DDAFC4F0181E6080001D5ECA /* Sources */,
+				DDAFC4F1181E6080001D5ECA /* Frameworks */,
+				DDAFC4F2181E6080001D5ECA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDAFC4FA181E6080001D5ECA /* PBXTargetDependency */,
+			);
+			name = hibouxTests;
+			productName = hibouxTests;
+			productReference = DDAFC4F4181E6080001D5ECA /* hibouxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDAFC4C8181E6080001D5ECA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jonas Oesch";
+				TargetAttributes = {
+					DDAFC4F3181E6080001D5ECA = {
+						TestTargetID = DDAFC4CF181E6080001D5ECA;
+					};
+				};
+			};
+			buildConfigurationList = DDAFC4CB181E6080001D5ECA /* Build configuration list for PBXProject "hiboux" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDAFC4C7181E6080001D5ECA;
+			productRefGroup = DDAFC4D1181E6080001D5ECA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDAFC4CF181E6080001D5ECA /* hiboux */,
+				DDAFC4F3181E6080001D5ECA /* hibouxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDAFC4CE181E6080001D5ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAFC4EA181E6080001D5ECA /* Main_iPad.storyboard in Resources */,
+				DDAFC4EF181E6080001D5ECA /* Images.xcassets in Resources */,
+				DDAFC4E7181E6080001D5ECA /* Main_iPhone.storyboard in Resources */,
+				DDAFC4DE181E6080001D5ECA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAFC4F2181E6080001D5ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAFC500181E6080001D5ECA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDAFC4CC181E6080001D5ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */,
+				DDAFC4ED181E6080001D5ECA /* ViewController.m in Sources */,
+				DDAFC4E4181E6080001D5ECA /* AppDelegate.m in Sources */,
+				DDAFC4E0181E6080001D5ECA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAFC4F0181E6080001D5ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAFC502181E6080001D5ECA /* hibouxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDAFC4FA181E6080001D5ECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDAFC4CF181E6080001D5ECA /* hiboux */;
+			targetProxy = DDAFC4F9181E6080001D5ECA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDAFC4DC181E6080001D5ECA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDAFC4DD181E6080001D5ECA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDAFC4E6181E6080001D5ECA /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DDAFC4E8181E6080001D5ECA /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDAFC4E9181E6080001D5ECA /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDAFC4FF181E6080001D5ECA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDAFC503181E6080001D5ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDAFC504181E6080001D5ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDAFC506181E6080001D5ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hiboux/hiboux-Prefix.pch";
+				INFOPLIST_FILE = "hiboux/hiboux-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DDAFC507181E6080001D5ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hiboux/hiboux-Prefix.pch";
+				INFOPLIST_FILE = "hiboux/hiboux-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DDAFC509181E6080001D5ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hiboux.app/hiboux";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hiboux/hiboux-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hibouxTests/hibouxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DDAFC50A181E6080001D5ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hiboux.app/hiboux";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hiboux/hiboux-Prefix.pch";
+				INFOPLIST_FILE = "hibouxTests/hibouxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDAFC4CB181E6080001D5ECA /* Build configuration list for PBXProject "hiboux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAFC503181E6080001D5ECA /* Debug */,
+				DDAFC504181E6080001D5ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAFC505181E6080001D5ECA /* Build configuration list for PBXNativeTarget "hiboux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAFC506181E6080001D5ECA /* Debug */,
+				DDAFC507181E6080001D5ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAFC508181E6080001D5ECA /* Build configuration list for PBXNativeTarget "hibouxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAFC509181E6080001D5ECA /* Debug */,
+				DDAFC50A181E6080001D5ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDAFC4C8181E6080001D5ECA /* Project object */;
+}
