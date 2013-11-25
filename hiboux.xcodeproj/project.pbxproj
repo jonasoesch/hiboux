@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD81E510184390E30012FAED /* OWLListOwlsViewController.m */; };
 		DDAFC4D4181E6080001D5ECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D3181E6080001D5ECA /* Foundation.framework */; };
 		DDAFC4D6181E6080001D5ECA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */; };
 		DDAFC4D8181E6080001D5ECA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D7181E6080001D5ECA /* UIKit.framework */; };
@@ -14,7 +15,6 @@
 		DDAFC4E0181E6080001D5ECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4DF181E6080001D5ECA /* main.m */; };
 		DDAFC4E4181E6080001D5ECA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4E3181E6080001D5ECA /* AppDelegate.m */; };
 		DDAFC4E7181E6080001D5ECA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */; };
-		DDAFC4EA181E6080001D5ECA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4E8181E6080001D5ECA /* Main_iPad.storyboard */; };
 		DDAFC4ED181E6080001D5ECA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4EC181E6080001D5ECA /* ViewController.m */; };
 		DDAFC4EF181E6080001D5ECA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4EE181E6080001D5ECA /* Images.xcassets */; };
 		DDAFC4F6181E6080001D5ECA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4F5181E6080001D5ECA /* XCTest.framework */; };
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLListOwlsViewController.h; sourceTree = "<group>"; };
+		DD81E510184390E30012FAED /* OWLListOwlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLListOwlsViewController.m; sourceTree = "<group>"; };
 		DDAFC4D0181E6080001D5ECA /* hiboux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiboux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDAFC4D3181E6080001D5ECA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,7 +49,6 @@
 		DDAFC4E2181E6080001D5ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDAFC4E3181E6080001D5ECA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DDAFC4E6181E6080001D5ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		DDAFC4E9181E6080001D5ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		DDAFC4EB181E6080001D5ECA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDAFC4EC181E6080001D5ECA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDAFC4EE181E6080001D5ECA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -120,9 +121,10 @@
 				DDAFC4E2181E6080001D5ECA /* AppDelegate.h */,
 				DDAFC4E3181E6080001D5ECA /* AppDelegate.m */,
 				DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */,
+				DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */,
+				DD81E510184390E30012FAED /* OWLListOwlsViewController.m */,
 				DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */,
 				DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */,
-				DDAFC4E8181E6080001D5ECA /* Main_iPad.storyboard */,
 				DDAFC4EB181E6080001D5ECA /* ViewController.h */,
 				DDAFC4EC181E6080001D5ECA /* ViewController.m */,
 				DDAFC4EE181E6080001D5ECA /* Images.xcassets */,
@@ -236,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDAFC4EA181E6080001D5ECA /* Main_iPad.storyboard in Resources */,
 				DDAFC4EF181E6080001D5ECA /* Images.xcassets in Resources */,
 				DDAFC4E7181E6080001D5ECA /* Main_iPhone.storyboard in Resources */,
 				DDAFC4DE181E6080001D5ECA /* InfoPlist.strings in Resources */,
@@ -259,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */,
+				DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */,
 				DDAFC4ED181E6080001D5ECA /* ViewController.m in Sources */,
 				DDAFC4E4181E6080001D5ECA /* AppDelegate.m in Sources */,
 				DDAFC4E0181E6080001D5ECA /* main.m in Sources */,
@@ -298,14 +300,6 @@
 				DDAFC4E6181E6080001D5ECA /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		DDAFC4E8181E6080001D5ECA /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDAFC4E9181E6080001D5ECA /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */ = {
@@ -402,6 +396,7 @@
 				GCC_PREFIX_HEADER = "hiboux/hiboux-Prefix.pch";
 				INFOPLIST_FILE = "hiboux/hiboux-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,6 +410,7 @@
 				GCC_PREFIX_HEADER = "hiboux/hiboux-Prefix.pch";
 				INFOPLIST_FILE = "hiboux/hiboux-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

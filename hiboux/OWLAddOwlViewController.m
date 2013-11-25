@@ -9,6 +9,7 @@
 #import "OWLAddOwlViewController.h"
 
 @interface OWLAddOwlViewController ()
+@property NSDate *timestamp;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexe;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *age;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *temps;
@@ -50,8 +51,11 @@
     int selectedSex = [[self sexe] selectedSegmentIndex];
     NSString *sexe = sexes[selectedSex];
     
+    [self setTimestamp:[NSDate date]];
+    
     NSLog(@"Age: %i", age);
     NSLog(@"Sexe: %@", sexe);
+    NSLog(@"Timestamp: %@", [self timestamp]);
     
 }
 @end
