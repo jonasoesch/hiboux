@@ -12,6 +12,7 @@
 @property NSDate *timestamp;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *age;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *temps;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sexeControl;
 
 - (IBAction)done:(id)sender;
 
@@ -47,13 +48,13 @@
     int age = [[self age] selectedSegmentIndex];
     age += 1;
     
-    int selectedSex = [[self sexe] selectedSegmentIndex];
-    NSString *sexe = sexes[selectedSex];
+    int selectedSex = [[self sexeControl] selectedSegmentIndex];
+    self.sexe = sexes[selectedSex];
     
     [self setTimestamp:[NSDate date]];
     
     NSLog(@"Age: %i", age);
-    NSLog(@"Sexe: %@", sexe);
+    NSLog(@"Sexe: %@", self.sexe);
     NSLog(@"Timestamp: %@", [self timestamp]);
     
 }

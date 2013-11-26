@@ -39,7 +39,7 @@
 - (IBAction)unwindToListOwls:(UIStoryboardSegue *)unwindSegue
 {
     OWLAddOwlViewController *source = unwindSegue.sourceViewController;
-    NSLog(@"Returned form segue: %i", [source.sexe selectedSegmentIndex]);
+    NSLog(@"Returned form segue: %@", source.sexe);
 }
 
 @end
