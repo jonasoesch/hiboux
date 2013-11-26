@@ -10,7 +10,6 @@
 
 @interface OWLAddOwlViewController ()
 @property NSDate *timestamp;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *sexe;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *age;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *temps;
 

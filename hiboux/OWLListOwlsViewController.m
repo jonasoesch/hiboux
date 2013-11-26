@@ -7,6 +7,7 @@
 //
 
 #import "OWLListOwlsViewController.h"
+#import "OWLAddOwlViewController.h"
 
 @interface OWLListOwlsViewController ()
 
@@ -33,6 +34,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)unwindToListOwls:(UIStoryboardSegue *)unwindSegue
+{
+    OWLAddOwlViewController *source = unwindSegue.sourceViewController;
+    NSLog(@"Returned form segue: %i", [source.sexe selectedSegmentIndex]);
 }
 
 @end

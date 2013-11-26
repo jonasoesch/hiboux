@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface OWLAddOwlViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sexe;
 @end

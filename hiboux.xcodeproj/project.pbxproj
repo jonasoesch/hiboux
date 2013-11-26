@@ -118,16 +118,16 @@
 		DDAFC4D9181E6080001D5ECA /* hiboux */ = {
 			isa = PBXGroup;
 			children = (
+				DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */,
 				DDAFC4E2181E6080001D5ECA /* AppDelegate.h */,
 				DDAFC4E3181E6080001D5ECA /* AppDelegate.m */,
-				DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */,
-				DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */,
-				DD81E510184390E30012FAED /* OWLListOwlsViewController.m */,
-				DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */,
-				DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */,
 				DDAFC4EB181E6080001D5ECA /* ViewController.h */,
 				DDAFC4EC181E6080001D5ECA /* ViewController.m */,
+				DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */,
+				DD81E510184390E30012FAED /* OWLListOwlsViewController.m */,
 				DDAFC4EE181E6080001D5ECA /* Images.xcassets */,
+				DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */,
+				DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */,
 				DDAFC4DA181E6080001D5ECA /* Supporting Files */,
 			);
 			path = hiboux;
