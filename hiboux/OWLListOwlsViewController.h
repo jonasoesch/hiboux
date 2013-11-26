@@ -10,5 +10,4 @@
 
 @interface OWLListOwlsViewController : UITableViewController
 
-@property NSString *sexe;
 @end

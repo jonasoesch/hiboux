@@ -7,7 +7,6 @@
 //
 
 #import "OWLAddOwlViewController.h"
-#import "OWLListOwlsViewController.h"
 
 @interface OWLAddOwlViewController ()
 @property NSDate *timestamp;
@@ -57,10 +56,6 @@
     NSLog(@"Age: %i", age);
     NSLog(@"Sexe: %@", sexe);
     NSLog(@"Timestamp: %@", [self timestamp]);
-    
-    OWLListOwlsViewController *root = [self.navigationController viewControllers][0];
-    [root setSexe:sexe];
-    [self.navigationController popViewControllerAnimated:YES];
     
 }
 @end

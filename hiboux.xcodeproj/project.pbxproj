@@ -22,8 +22,6 @@
 		DDAFC4F8181E6080001D5ECA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D7181E6080001D5ECA /* UIKit.framework */; };
 		DDAFC500181E6080001D5ECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */; };
 		DDAFC502181E6080001D5ECA /* hibouxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC501181E6080001D5ECA /* hibouxTests.m */; };
-		DDB5097118439B7400D3BC54 /* OWLRecensementStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB5097018439B7400D3BC54 /* OWLRecensementStore.m */; };
-		DDB5097418439C4700D3BC54 /* OWLRecensement.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB5097318439C4700D3BC54 /* OWLRecensement.m */; };
 		DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -59,10 +57,6 @@
 		DDAFC4FD181E6080001D5ECA /* hibouxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hibouxTests-Info.plist"; sourceTree = "<group>"; };
 		DDAFC4FF181E6080001D5ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDAFC501181E6080001D5ECA /* hibouxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hibouxTests.m; sourceTree = "<group>"; };
-		DDB5096F18439B7400D3BC54 /* OWLRecensementStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLRecensementStore.h; sourceTree = "<group>"; };
-		DDB5097018439B7400D3BC54 /* OWLRecensementStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLRecensementStore.m; sourceTree = "<group>"; };
-		DDB5097218439C4700D3BC54 /* OWLRecensement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLRecensement.h; sourceTree = "<group>"; };
-		DDB5097318439C4700D3BC54 /* OWLRecensement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLRecensement.m; sourceTree = "<group>"; };
 		DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLAddOwlViewController.h; sourceTree = "<group>"; };
 		DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLAddOwlViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,10 +129,6 @@
 				DDAFC4EC181E6080001D5ECA /* ViewController.m */,
 				DDAFC4EE181E6080001D5ECA /* Images.xcassets */,
 				DDAFC4DA181E6080001D5ECA /* Supporting Files */,
-				DDB5096F18439B7400D3BC54 /* OWLRecensementStore.h */,
-				DDB5097018439B7400D3BC54 /* OWLRecensementStore.m */,
-				DDB5097218439C4700D3BC54 /* OWLRecensement.h */,
-				DDB5097318439C4700D3BC54 /* OWLRecensement.m */,
 			);
 			path = hiboux;
 			sourceTree = "<group>";
@@ -270,11 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */,
-				DDB5097418439C4700D3BC54 /* OWLRecensement.m in Sources */,
 				DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */,
 				DDAFC4ED181E6080001D5ECA /* ViewController.m in Sources */,
 				DDAFC4E4181E6080001D5ECA /* AppDelegate.m in Sources */,
-				DDB5097118439B7400D3BC54 /* OWLRecensementStore.m in Sources */,
 				DDAFC4E0181E6080001D5ECA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

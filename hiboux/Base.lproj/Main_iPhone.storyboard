@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" title="Title" id="z8X-iz-lHd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xBt-7L-zKL">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="push" identifier="addOwlSegue" id="XsW-LC-v4u"/>
+                                <segue destination="vXZ-lx-hvc" kind="push" id="XsW-LC-v4u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="572"/>
+            <point key="canvasLocation" x="840" y="572"/>
         </scene>
     </scenes>
     <resources>
