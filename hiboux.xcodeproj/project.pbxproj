@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075AF9CF1847796B00F6BEFF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075AF9CE1847796B00F6BEFF /* CoreData.framework */; };
+		075AF9D218477A2700F6BEFF /* hiboux.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 075AF9D018477A2700F6BEFF /* hiboux.xcdatamodeld */; };
 		DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD81E510184390E30012FAED /* OWLListOwlsViewController.m */; };
 		DDAFC4D4181E6080001D5ECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D3181E6080001D5ECA /* Foundation.framework */; };
 		DDAFC4D6181E6080001D5ECA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075AF9CE1847796B00F6BEFF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		075AF9D118477A2700F6BEFF /* hiboux.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hiboux.xcdatamodel; sourceTree = "<group>"; };
 		DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWLListOwlsViewController.h; path = hiboux/OWLListOwlsViewController.h; sourceTree = "<group>"; };
 		DD81E510184390E30012FAED /* OWLListOwlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWLListOwlsViewController.m; path = hiboux/OWLListOwlsViewController.m; sourceTree = "<group>"; };
 		DDAFC4D0181E6080001D5ECA /* hiboux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiboux.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075AF9CF1847796B00F6BEFF /* CoreData.framework in Frameworks */,
 				DDAFC4D6181E6080001D5ECA /* CoreGraphics.framework in Frameworks */,
 				DDAFC4D8181E6080001D5ECA /* UIKit.framework in Frameworks */,
 				DDAFC4D4181E6080001D5ECA /* Foundation.framework in Frameworks */,
@@ -119,6 +124,7 @@
 			children = (
 				DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */,
 				DDAFC4EE181E6080001D5ECA /* Images.xcassets */,
+				075AF9D018477A2700F6BEFF /* hiboux.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 		DDAFC4D2181E6080001D5ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				075AF9CE1847796B00F6BEFF /* CoreData.framework */,
 				DDAFC4D3181E6080001D5ECA /* Foundation.framework */,
 				DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */,
 				DDAFC4D7181E6080001D5ECA /* UIKit.framework */,
@@ -293,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075AF9D218477A2700F6BEFF /* hiboux.xcdatamodeld in Sources */,
 				DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */,
 				DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */,
 				DDAFC4ED181E6080001D5ECA /* OWLViewController.m in Sources */,
@@ -523,6 +531,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		075AF9D018477A2700F6BEFF /* hiboux.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				075AF9D118477A2700F6BEFF /* hiboux.xcdatamodel */,
+			);
+			currentVersion = 075AF9D118477A2700F6BEFF /* hiboux.xcdatamodel */;
+			path = hiboux.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DDAFC4C8181E6080001D5ECA /* Project object */;
 }
