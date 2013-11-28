@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Jonas Oesch. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "OWLAppDelegate.h"
 
-@implementation AppDelegate
+@implementation OWLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Jonas Oesch. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "OWLViewController.h"
 
-@interface ViewController ()
+@interface OWLViewController ()
 
 @end
 
-@implementation ViewController
+@implementation OWLViewController
 
 - (void)viewDidLoad
 {
