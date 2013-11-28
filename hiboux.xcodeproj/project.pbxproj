@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLListOwlsViewController.h; sourceTree = "<group>"; };
-		DD81E510184390E30012FAED /* OWLListOwlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLListOwlsViewController.m; sourceTree = "<group>"; };
+		DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWLListOwlsViewController.h; path = hiboux/OWLListOwlsViewController.h; sourceTree = "<group>"; };
+		DD81E510184390E30012FAED /* OWLListOwlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWLListOwlsViewController.m; path = hiboux/OWLListOwlsViewController.m; sourceTree = "<group>"; };
 		DDAFC4D0181E6080001D5ECA /* hiboux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiboux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDAFC4D3181E6080001D5ECA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,19 +46,19 @@
 		DDAFC4DD181E6080001D5ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDAFC4DF181E6080001D5ECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DDAFC4E1181E6080001D5ECA /* hiboux-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hiboux-Prefix.pch"; sourceTree = "<group>"; };
-		DDAFC4E2181E6080001D5ECA /* OWLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWLAppDelegate.h; sourceTree = "<group>"; };
-		DDAFC4E3181E6080001D5ECA /* OWLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWLAppDelegate.m; sourceTree = "<group>"; };
+		DDAFC4E2181E6080001D5ECA /* OWLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWLAppDelegate.h; path = hiboux/OWLAppDelegate.h; sourceTree = "<group>"; };
+		DDAFC4E3181E6080001D5ECA /* OWLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OWLAppDelegate.m; path = hiboux/OWLAppDelegate.m; sourceTree = "<group>"; };
 		DDAFC4E6181E6080001D5ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		DDAFC4EB181E6080001D5ECA /* OWLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWLViewController.h; sourceTree = "<group>"; };
-		DDAFC4EC181E6080001D5ECA /* OWLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWLViewController.m; sourceTree = "<group>"; };
-		DDAFC4EE181E6080001D5ECA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DDAFC4EB181E6080001D5ECA /* OWLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWLViewController.h; path = hiboux/OWLViewController.h; sourceTree = "<group>"; };
+		DDAFC4EC181E6080001D5ECA /* OWLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OWLViewController.m; path = hiboux/OWLViewController.m; sourceTree = "<group>"; };
+		DDAFC4EE181E6080001D5ECA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = hiboux/Images.xcassets; sourceTree = "<group>"; };
 		DDAFC4F4181E6080001D5ECA /* hibouxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hibouxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDAFC4F5181E6080001D5ECA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DDAFC4FD181E6080001D5ECA /* hibouxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hibouxTests-Info.plist"; sourceTree = "<group>"; };
 		DDAFC4FF181E6080001D5ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDAFC501181E6080001D5ECA /* hibouxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hibouxTests.m; sourceTree = "<group>"; };
-		DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLAddOwlViewController.h; sourceTree = "<group>"; };
-		DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLAddOwlViewController.m; sourceTree = "<group>"; };
+		DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWLAddOwlViewController.h; path = hiboux/OWLAddOwlViewController.h; sourceTree = "<group>"; };
+		DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWLAddOwlViewController.m; path = hiboux/OWLAddOwlViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +85,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075AF9CA184774EA00F6BEFF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4EB181E6080001D5ECA /* OWLViewController.h */,
+				DDAFC4EC181E6080001D5ECA /* OWLViewController.m */,
+				DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */,
+				DD81E510184390E30012FAED /* OWLListOwlsViewController.m */,
+				DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */,
+				DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		075AF9CB1847751300F6BEFF /* Model Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Class";
+			sourceTree = "<group>";
+		};
+		075AF9CC1847751D00F6BEFF /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4E2181E6080001D5ECA /* OWLAppDelegate.h */,
+				DDAFC4E3181E6080001D5ECA /* OWLAppDelegate.m */,
+			);
+			name = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		075AF9CD1847753200F6BEFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */,
+				DDAFC4EE181E6080001D5ECA /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		DDAFC4C7181E6080001D5ECA = {
 			isa = PBXGroup;
 			children = (
+				075AF9CA184774EA00F6BEFF /* View Controllers */,
+				075AF9CB1847751300F6BEFF /* Model Class */,
+				075AF9CC1847751D00F6BEFF /* Application Delegate */,
+				075AF9CD1847753200F6BEFF /* Resources */,
+				DDAFC4DA181E6080001D5ECA /* Supporting Files */,
 				DDAFC4D9181E6080001D5ECA /* hiboux */,
 				DDAFC4FB181E6080001D5ECA /* hibouxTests */,
 				DDAFC4D2181E6080001D5ECA /* Frameworks */,
@@ -118,17 +161,6 @@
 		DDAFC4D9181E6080001D5ECA /* hiboux */ = {
 			isa = PBXGroup;
 			children = (
-				DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */,
-				DDAFC4E2181E6080001D5ECA /* OWLAppDelegate.h */,
-				DDAFC4E3181E6080001D5ECA /* OWLAppDelegate.m */,
-				DDAFC4EB181E6080001D5ECA /* OWLViewController.h */,
-				DDAFC4EC181E6080001D5ECA /* OWLViewController.m */,
-				DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */,
-				DD81E510184390E30012FAED /* OWLListOwlsViewController.m */,
-				DDAFC4EE181E6080001D5ECA /* Images.xcassets */,
-				DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */,
-				DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */,
-				DDAFC4DA181E6080001D5ECA /* Supporting Files */,
 			);
 			path = hiboux;
 			sourceTree = "<group>";
@@ -142,6 +174,7 @@
 				DDAFC4E1181E6080001D5ECA /* hiboux-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = hiboux;
 			sourceTree = "<group>";
 		};
 		DDAFC4FB181E6080001D5ECA /* hibouxTests */ = {
@@ -301,6 +334,7 @@
 				DDAFC4E6181E6080001D5ECA /* Base */,
 			);
 			name = Main_iPhone.storyboard;
+			path = hiboux;
 			sourceTree = "<group>";
 		};
 		DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */ = {
