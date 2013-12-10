@@ -86,8 +86,8 @@
     [newRegistration setValue: self.sexe forKey:@"sexe"];
     
     
-    // no_ring (NSNumber)
-    NSNumber *no_ring = [NSNumber numberWithInt:1234];
+    // no_ring (NSString)
+    NSString *no_ring = @"1234B";
     [newRegistration setValue: no_ring forKey:@"no_ring"];
     
     
@@ -152,7 +152,7 @@
     double latitude = position.coordinate.latitude;
     double longitude = position.coordinate.longitude;
     altitude = [NSNumber numberWithInt:position.altitude];
-    
+
     NSLog(@"Lat: %f / Long: %f / Alt: %@", latitude, longitude, altitude);
     
     NSLog(@"Age: %i", age);

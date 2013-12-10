@@ -18,7 +18,7 @@
 @property (nonatomic, retain) NSNumber * altitude;
 @property (nonatomic, retain) NSNumber * age;
 @property (nonatomic, retain) NSString * sexe;
-@property (nonatomic, retain) NSNumber * no_ring;
+@property (nonatomic, retain) NSString * no_ring;
 @property (nonatomic, retain) NSNumber * weight;
 @property (nonatomic, retain) NSNumber * wing_size;
 @property (nonatomic, retain) NSNumber * tarse;

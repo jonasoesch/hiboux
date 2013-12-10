@@ -9,7 +9,7 @@
         <attribute name="coorY" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="family" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="no_ring" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="no_ring" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sexe" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="spieces" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="statusWeather" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,6 +20,6 @@
         <attribute name="wing_size" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Registration" positionX="160" positionY="192" width="128" height="298"/>
+        <element name="Registration" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

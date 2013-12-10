@@ -40,6 +40,21 @@
 {
     OWLAddOwlViewController *source = unwindSegue.sourceViewController;
     NSLog(@"Returned form segue: %@", source.sexe);
+    
+    OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Registration" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(age = %i)", 1];
+    [request setPredicate:pred];
+    NSManagedObject *matches = nil;
+    NSError *error;
+    NSArray *objects = [context executeFetchRequest:request error:&error];
+    
+    NSLog(@"%@", objects);
+    
+    
 }
 
 @end
