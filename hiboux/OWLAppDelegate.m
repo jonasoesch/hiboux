@@ -40,11 +40,20 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if (self.locationManager == nil)
+    {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.desiredAccuracy =
+        kCLLocationAccuracyNearestTenMeters ;
+        self.locationManager.delegate = (id)self;
+    }
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[self locationManager] stopUpdatingLocation];
 }
 
 - (void)saveContext

@@ -7,12 +7,14 @@
 //
 
 #import "OWLAddOwlViewController.h"
+#import "OWLAppDelegate.h"
 
 @interface OWLAddOwlViewController ()
 @property NSDate *timestamp;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *age;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *temps;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexeControl;
+
 
 - (IBAction)done:(id)sender;
 
@@ -33,6 +35,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,9 +57,23 @@
     
     [self setTimestamp:[NSDate date]];
     
+    OWLAppDelegate *appDelegate = (OWLAppDelegate *)[[UIApplication sharedApplication] delegate];
+    CLLocation *position = appDelegate.locationManager.location;
+    double latitude = position.coordinate.latitude;
+    double longitude = position.coordinate.longitude;
+    int altitude = position.altitude;
+    
+    NSLog(@"Lat: %f / Long: %f / Alt: %i", latitude, longitude, altitude);
+    
     NSLog(@"Age: %i", age);
     NSLog(@"Sexe: %@", self.sexe);
     NSLog(@"Timestamp: %@", [self timestamp]);
     
+    
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 @end

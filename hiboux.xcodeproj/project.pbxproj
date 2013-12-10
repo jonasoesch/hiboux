@@ -10,6 +10,8 @@
 		075AF9CF1847796B00F6BEFF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075AF9CE1847796B00F6BEFF /* CoreData.framework */; };
 		075AF9D218477A2700F6BEFF /* hiboux.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 075AF9D018477A2700F6BEFF /* hiboux.xcdatamodeld */; };
 		075AF9D5184780CE00F6BEFF /* Registration.m in Sources */ = {isa = PBXBuildFile; fileRef = 075AF9D4184780CE00F6BEFF /* Registration.m */; };
+		DD313BB11853C9EF000C9B03 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD313BB01853C9EF000C9B03 /* CoreLocation.framework */; };
+		DD313BB31853D05A000C9B03 /* yverdon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DD313BB21853D05A000C9B03 /* yverdon.gpx */; };
 		DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD81E510184390E30012FAED /* OWLListOwlsViewController.m */; };
 		DDAFC4D4181E6080001D5ECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D3181E6080001D5ECA /* Foundation.framework */; };
 		DDAFC4D6181E6080001D5ECA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */; };
@@ -43,6 +45,8 @@
 		075AF9D118477A2700F6BEFF /* hiboux.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hiboux.xcdatamodel; sourceTree = "<group>"; };
 		075AF9D3184780CE00F6BEFF /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registration.h; sourceTree = "<group>"; };
 		075AF9D4184780CE00F6BEFF /* Registration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registration.m; sourceTree = "<group>"; };
+		DD313BB01853C9EF000C9B03 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DD313BB21853D05A000C9B03 /* yverdon.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = yverdon.gpx; sourceTree = "<group>"; };
 		DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWLListOwlsViewController.h; path = hiboux/OWLListOwlsViewController.h; sourceTree = "<group>"; };
 		DD81E510184390E30012FAED /* OWLListOwlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWLListOwlsViewController.m; path = hiboux/OWLListOwlsViewController.m; sourceTree = "<group>"; };
 		DDAFC4D0181E6080001D5ECA /* hiboux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiboux.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD313BB11853C9EF000C9B03 /* CoreLocation.framework in Frameworks */,
 				075AF9CF1847796B00F6BEFF /* CoreData.framework in Frameworks */,
 				DDAFC4D6181E6080001D5ECA /* CoreGraphics.framework in Frameworks */,
 				DDAFC4D8181E6080001D5ECA /* UIKit.framework in Frameworks */,
@@ -137,6 +142,7 @@
 		DDAFC4C7181E6080001D5ECA = {
 			isa = PBXGroup;
 			children = (
+				DD313BB21853D05A000C9B03 /* yverdon.gpx */,
 				075AF9CA184774EA00F6BEFF /* View Controllers */,
 				075AF9CB1847751300F6BEFF /* Model Class */,
 				075AF9CC1847751D00F6BEFF /* Application Delegate */,
@@ -161,6 +167,7 @@
 		DDAFC4D2181E6080001D5ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD313BB01853C9EF000C9B03 /* CoreLocation.framework */,
 				075AF9CE1847796B00F6BEFF /* CoreData.framework */,
 				DDAFC4D3181E6080001D5ECA /* Foundation.framework */,
 				DDAFC4D5181E6080001D5ECA /* CoreGraphics.framework */,
@@ -287,6 +294,7 @@
 				DDAFC4EF181E6080001D5ECA /* Images.xcassets in Resources */,
 				DDAFC4E7181E6080001D5ECA /* Main_iPhone.storyboard in Resources */,
 				DDAFC4DE181E6080001D5ECA /* InfoPlist.strings in Resources */,
+				DD313BB31853D05A000C9B03 /* yverdon.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
