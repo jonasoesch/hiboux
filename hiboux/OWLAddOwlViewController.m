@@ -69,13 +69,17 @@
     
     
     // age (NSNumber)
-    NSNumber *age = [NSNumber numberWithInt:2];
-    [newRegistration setValue: age forKey:@"age"];
+    int age = [[self age] selectedSegmentIndex];
+    age += 1;
+    NSNumber *ageCorrect = [NSNumber numberWithInt:age];
+    [newRegistration setValue: ageCorrect forKey:@"age"];
     
     
     // sexe (NSString)
-    NSString *sexe = @"Male";
-    [newRegistration setValue: sexe forKey:@"sexe"];
+    NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Femelle", nil];
+    int selectedSex = [[self sexeControl] selectedSegmentIndex];
+    self.sexe = sexes[selectedSex];
+    [newRegistration setValue: self.sexe forKey:@"sexe"];
     
     
     // no_ring (NSNumber)
@@ -124,7 +128,9 @@
     
     
     // statusWeather (NSString)
-    NSString *statusWeather = @"rain";
+    int temps = [[self temps] selectedSegmentIndex];
+    NSArray *arrayTemps = [NSArray arrayWithObjects:@"sun", @"rain", @"cloudy", @"fog", @"period of sunshine", @"snow", nil];
+    NSString *statusWeather = arrayTemps[temps];
     [newRegistration setValue: statusWeather forKey:@"statusWeather"];
     
     
@@ -136,39 +142,23 @@
     NSError *error;
     [context save:&error];
     
-    /*
-    NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Femelle", nil];
     
-    int age = [[self age] selectedSegmentIndex];
-    age += 1;
-    
-    int selectedSex = [[self sexeControl] selectedSegmentIndex];
-    self.sexe = sexes[selectedSex];
-    
-    [self setTimestamp:[NSDate date]];
-    
-    NSLog(@"Age: %i", age);
-    NSLog(@"Sexe: %@", self.sexe);
-    NSLog(@"Timestamp: %@", [self timestamp]);
-    
-    */
-    
-    NSLog(@"coorX: %@", [newRegistration valueForKey:@"coorX"] );
-    NSLog(@"coorY: %@", [newRegistration valueForKey:@"coorY"] );
-    NSLog(@"timestamp: %@", [newRegistration valueForKey:@"timestamp"] );
-    NSLog(@"altitude: %@", [newRegistration valueForKey:@"altitude"] );
-    NSLog(@"age: %@", [newRegistration valueForKey:@"age"] );
-    NSLog(@"sexe: %@", [newRegistration valueForKey:@"sexe"] );
-    NSLog(@"no_ring: %@", [newRegistration valueForKey:@"no_ring"] );
-    NSLog(@"weight: %@", [newRegistration valueForKey:@"weight"] );
-    NSLog(@"wing_size: %@", [newRegistration valueForKey:@"wing_size"] );
-    NSLog(@"tarse: %@", [newRegistration valueForKey:@"tarse"] );
-    NSLog(@"comments: %@", [newRegistration valueForKey:@"comments"] );
-    NSLog(@"spieces: %@", [newRegistration valueForKey:@"spieces"] );
-    NSLog(@"family: %@", [newRegistration valueForKey:@"family"] );
-    NSLog(@"locationName: %@", [newRegistration valueForKey:@"locationName"] );
+    NSLog(@"coorX: %@",         [newRegistration valueForKey:@"coorX"] );
+    NSLog(@"coorY: %@",         [newRegistration valueForKey:@"coorY"] );
+    NSLog(@"timestamp: %@",     [newRegistration valueForKey:@"timestamp"] );
+    NSLog(@"altitude: %@",      [newRegistration valueForKey:@"altitude"] );
+    NSLog(@"age: %@",           [newRegistration valueForKey:@"age"] );
+    NSLog(@"sexe: %@",          [newRegistration valueForKey:@"sexe"] );
+    NSLog(@"no_ring: %@",       [newRegistration valueForKey:@"no_ring"] );
+    NSLog(@"weight: %@",        [newRegistration valueForKey:@"weight"] );
+    NSLog(@"wing_size: %@",     [newRegistration valueForKey:@"wing_size"] );
+    NSLog(@"tarse: %@",         [newRegistration valueForKey:@"tarse"] );
+    NSLog(@"comments: %@",      [newRegistration valueForKey:@"comments"] );
+    NSLog(@"spieces: %@",       [newRegistration valueForKey:@"spieces"] );
+    NSLog(@"family: %@",        [newRegistration valueForKey:@"family"] );
+    NSLog(@"locationName: %@",  [newRegistration valueForKey:@"locationName"] );
     NSLog(@"statusWeather: %@", [newRegistration valueForKey:@"statusWeather"] );
-    NSLog(@"temperature: %@", [newRegistration valueForKey:@"temperature"] );
+    NSLog(@"temperature: %@",   [newRegistration valueForKey:@"temperature"] );
     
 }
 @end
