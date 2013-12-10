@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OWLAppDelegate.h"
 
 @interface OWLAddOwlViewController : UIViewController
 
