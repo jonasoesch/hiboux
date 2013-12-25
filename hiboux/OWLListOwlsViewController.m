@@ -11,6 +11,8 @@
 
 @interface OWLListOwlsViewController ()
 
+@property NSArray *owls;
+
 @end
 
 @implementation OWLListOwlsViewController
@@ -52,9 +54,32 @@
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request error:&error];
     
-    NSLog(@"%@", objects);
+    self.owls = objects;
+    NSLog(@"%i", [self.owls count]);
     
+    [self.tableView reloadData];
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     
+    return [self.owls count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"OWLEntry";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSManagedObject *owl = [self.owls objectAtIndex:indexPath.row];
+    cell.textLabel.text = [owl valueForKey:@"spieces"];
+    cell.detailTextLabel.text = [[owl valueForKey:@"timestamp"] description];
+    return cell;
 }
 
 @end
