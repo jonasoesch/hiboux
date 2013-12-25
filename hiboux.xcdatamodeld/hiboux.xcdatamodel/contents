@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Registration" representedClassName="Registration" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="altitude" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -11,7 +11,7 @@
         <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="no_ring" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sexe" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="spieces" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="species" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="statusWeather" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tarse" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="temperature" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>

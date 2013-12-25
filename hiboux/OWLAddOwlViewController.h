@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "OWLAppDelegate.h"
+#import "OWLSelectionViewController.h"
 
 @interface OWLAddOwlViewController : UIViewController
 
 @property NSString *sexe;
+@property NSManagedObject *currentRegistration;
+@property NSManagedObjectContext *context;
 
 
 @end

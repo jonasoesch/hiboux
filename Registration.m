@@ -22,7 +22,7 @@
 @dynamic wing_size;
 @dynamic tarse;
 @dynamic comments;
-@dynamic spieces;
+@dynamic species;
 @dynamic family;
 @dynamic locationName;
 @dynamic statusWeather;

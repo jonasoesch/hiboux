@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSNumber * wing_size;
 @property (nonatomic, retain) NSNumber * tarse;
 @property (nonatomic, retain) NSString * comments;
-@property (nonatomic, retain) NSString * spieces;
+@property (nonatomic, retain) NSString * species;
 @property (nonatomic, retain) NSString * family;
 @property (nonatomic, retain) NSString * locationName;
 @property (nonatomic, retain) NSString * statusWeather;

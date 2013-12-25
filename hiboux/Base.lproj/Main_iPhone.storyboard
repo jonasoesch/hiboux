@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="L5X-R7-F4x">
-                                <rect key="frame" x="99" y="108" width="123" height="29"/>
+                                <rect key="frame" x="58" y="129" width="123" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="M"/>
@@ -99,7 +99,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-hS-wOp">
-                                <rect key="frame" x="99" y="165" width="123" height="29"/>
+                                <rect key="frame" x="58" y="175" width="123" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="1"/>
@@ -120,7 +120,7 @@
                                 </segments>
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="-30" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="NAm-6Y-aEM">
-                                <rect key="frame" x="67" y="287" width="207" height="34"/>
+                                <rect key="frame" x="67" y="278" width="207" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dui-o4-shL">
@@ -136,6 +136,16 @@
                                     <segue destination="t4f-fE-erR" kind="unwind" unwindAction="unwindToListOwls:" id="ghN-6i-AB0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-J9-0rs">
+                                <rect key="frame" x="58" y="85" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="B. Lactus – Aves – Strigidae">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kGP-tm-bH7" kind="modal" id="9Fp-NQ-fdu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -146,13 +156,57 @@
                     <connections>
                         <outlet property="age" destination="gJj-hS-wOp" id="aGL-lP-vyY"/>
                         <outlet property="sexeControl" destination="L5X-R7-F4x" id="J0I-KT-Nhw"/>
+                        <outlet property="species" destination="MWF-J9-0rs" id="htc-GF-PPf"/>
                         <outlet property="temps" destination="nGf-Os-ykU" id="rG6-TB-pb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="t4f-fE-erR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="840" y="552"/>
+            <point key="canvasLocation" x="805" y="578"/>
+        </scene>
+        <!--Selection View Controller-->
+        <scene sceneID="TKT-2z-87R">
+            <objects>
+                <tableViewController id="kGP-tm-bH7" customClass="OWLSelectionViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dx1-B9-rSi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpeciesSelection" textLabel="GY9-nh-hY7" style="IBUITableViewCellStyleDefault" id="hb5-UR-1uK">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hb5-UR-1uK" id="QZ8-O5-H9V">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Asio abyssinicus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GY9-nh-hY7">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mVg-Uc-m0m" kind="unwind" unwindAction="unwindToAddOwls:" id="ngz-ed-Hh5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kGP-tm-bH7" id="zNn-Ie-KXq"/>
+                            <outlet property="delegate" destination="kGP-tm-bH7" id="tjv-PO-exm"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="963-Ns-gME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mVg-Uc-m0m" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="578"/>
         </scene>
     </scenes>
     <resources>

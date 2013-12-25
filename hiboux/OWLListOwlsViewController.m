@@ -89,7 +89,7 @@
     static NSString *CellIdentifier = @"OWLEntry";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSManagedObject *owl = [self.owls objectAtIndex:indexPath.row];
-    cell.textLabel.text = [owl valueForKey:@"spieces"];
+    cell.textLabel.text = [owl valueForKey:@"species"];
     cell.detailTextLabel.text = [[owl valueForKey:@"timestamp"] description];
     return cell;
 }
