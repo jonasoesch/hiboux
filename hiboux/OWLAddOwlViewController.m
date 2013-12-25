@@ -144,9 +144,7 @@
     
     
     NSError *error;
-    BOOL saved = [context save:&error];
-    
-    NSLog(@"Saved: %i", saved);
+    [context save:&error];
     
     
     OWLAppDelegate *myAppDelegate = (OWLAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -154,7 +152,7 @@
     double latitude = position.coordinate.latitude;
     double longitude = position.coordinate.longitude;
     altitude = [NSNumber numberWithInt:position.altitude];
-    /*
+    
     NSLog(@"Lat: %f / Long: %f / Alt: %@", latitude, longitude, altitude);
     
     NSLog(@"Age: %i", age);
@@ -178,7 +176,7 @@
     NSLog(@"statusWeather: %@", [newRegistration valueForKey:@"statusWeather"] );
     NSLog(@"temperature: %@",   [newRegistration valueForKey:@"temperature"] );
     
-    */
+    
     
 }
 
