@@ -94,4 +94,46 @@
     return cell;
 }
 
+/*
+- (void)saveJSON
+{
+    OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Registration" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    
+    //NSLog(@"Registration: %@",  [self.Registration[1] valueForKey:@"timestamp"] );
+    
+    NSLog(@"%@", entityDesc);
+    
+    
+    NSMutableArray *itemNames = [[NSMutableArray alloc] init];
+    for(int i = 0;i<self.owls.count;i++) {
+        [itemNames addObject:[self.owls[i] itemName]];
+    }
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:itemNames options:NSJSONWritingPrettyPrinted error:NULL];
+    NSLog(@"%@", jsonData);
+    
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSString *post = [[NSString alloc] initWithFormat:@"contents=%@",jsonString];
+    
+    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:self.todosPath];
+    [request setHTTPMethod:@"POST"];
+    
+    [request setHTTPBody:[post dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    
+    if(responseData != nil) {
+        NSLog(@"%@", self.todosPath);
+    };
+ 
+}
+ 
+*/
+
 @end
