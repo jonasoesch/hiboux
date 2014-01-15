@@ -10,11 +10,16 @@
 #import "OWLAppDelegate.h"
 
 @interface OWLAddOwlViewController ()
+@property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
 @property NSDate *timestamp;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *age;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *temps;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexeControl;
 @property (weak, nonatomic) IBOutlet UIButton *species;
+@property (weak, nonatomic) IBOutlet UITextField *no_ring;
+@property (weak, nonatomic) IBOutlet UITextField *weight;
+@property (weak, nonatomic) IBOutlet UITextField *wing_size;
+@property (weak, nonatomic) IBOutlet UITextField *tarse;
 
 
 - (IBAction)done:(id)sender;
@@ -40,6 +45,10 @@
     OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     self.context = [appDelegate managedObjectContext];
     self.currentRegistration = [NSEntityDescription insertNewObjectForEntityForName:@"Registration" inManagedObjectContext:self.context];
+    
+    [self.scrolly setScrollEnabled:YES];
+    [self.scrolly setContentSize:CGSizeMake(250, 800)];
+    
 
 
 }
@@ -187,4 +196,6 @@
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 }
+
+
 @end
