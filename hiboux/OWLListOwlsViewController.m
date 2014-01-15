@@ -8,6 +8,8 @@
 
 #import "OWLListOwlsViewController.h"
 #import "OWLAddOwlViewController.h"
+#import "OWLHelpers.h"
+
 
 @interface OWLListOwlsViewController ()
 
@@ -38,19 +40,7 @@
 
 -(void)updateOwls
 {
-    OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Registration" inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDesc];
-    
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        initWithKey:@"timestamp" ascending:NO];
-    [request setSortDescriptors:@[sortDescriptor]];
-    
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
+    NSArray *objects = [OWLHelpers getOwls];
     
     self.owls = objects;
     NSLog(@"%i", [self.owls count]);
@@ -94,7 +84,31 @@
     return cell;
 }
 
+
+
+
+ 
+
+
 - (IBAction)send:(id)sender {
+
+    NSLog(@"Send");
+    
+    [self saveJSON];
+    
+}
+
+
+- (void)saveJSON {
+    
+    NSArray *objects = [OWLHelpers getOwls];
+    
+    //NSLog(@"%@", objects);
+    
+    //NSData *dataJSON = [NSJSONSerialization dataWithJSONObject:objects options:NSJSONWritingPrettyPrinted error:NULL];
+    
+    //NSLog(@"%@", dataJSON);
+    
 }
 
 @end
