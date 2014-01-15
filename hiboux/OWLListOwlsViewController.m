@@ -94,4 +94,7 @@
     return cell;
 }
 
+- (IBAction)send:(id)sender {
+}
+
 @end

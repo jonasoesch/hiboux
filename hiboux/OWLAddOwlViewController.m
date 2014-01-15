@@ -51,7 +51,7 @@
     self.currentRegistration = [NSEntityDescription insertNewObjectForEntityForName:@"Registration" inManagedObjectContext:self.context];
     
     [self.scrolly setScrollEnabled:YES];
-    [self.scrolly setContentSize:CGSizeMake(250, 800)];
+    [self.scrolly setContentSize:CGSizeMake(250, 600)];
     
 }
 
@@ -217,11 +217,11 @@
 
 - (void)updateSliderPopoverText
 {
-    self.tempSlider.popover.textLabel.text = [NSString stringWithFormat:@"%0.0f", self.tempSlider.value];
+    self.tempSlider.popover.textLabel.text = [NSString stringWithFormat:@"%0.0f °C", self.tempSlider.value];
 }
 
 
-#define kOFFSET_FOR_KEYBOARD 200.0
+#define kOFFSET_FOR_KEYBOARD 220.0
 
 -(void)keyboardWillShow {
     // Animate the current view out of the way
