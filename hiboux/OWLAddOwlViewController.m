@@ -210,8 +210,8 @@
     [super viewWillDisappear:animated];
 }
 
-- (IBAction)sliderValueChanged:(id)sender
-{
+
+- (IBAction)tempSliderValueChanged:(id)sender {
     [self updateSliderPopoverText];
 }
 
