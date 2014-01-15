@@ -118,7 +118,7 @@
     
     
     // weight (NSNumber)
-    NSNumber *weight = [NSNumber numberWithInt:900];
+    NSNumber *weight = [formatter numberFromString:self.weight.text];
     [self.currentRegistration setValue: weight forKey:@"weight"];
     
     
@@ -136,7 +136,6 @@
     //NSString *comments = self.comments.text;
     NSString *comments = @"comentaire";
     [self.currentRegistration setValue: comments forKey:@"comments"];
-    
     
     
     // classe (NSString)
@@ -162,7 +161,7 @@
     
     
     // temperature (NSNumber)
-    NSNumber *temperature = [formatter numberFromString:self.temperature.text];
+    NSNumber *temperature = [NSNumber numberWithFloat:self.tempSlider.value];
     [self.currentRegistration setValue: temperature forKey:@"temperature"];
     
     
