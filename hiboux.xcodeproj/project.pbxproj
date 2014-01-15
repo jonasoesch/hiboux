@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074D743C1886CD8E00761C42 /* OWLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D743B1886CD8E00761C42 /* OWLHelpers.m */; };
 		075AF9CF1847796B00F6BEFF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075AF9CE1847796B00F6BEFF /* CoreData.framework */; };
 		075AF9D218477A2700F6BEFF /* hiboux.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 075AF9D018477A2700F6BEFF /* hiboux.xcdatamodeld */; };
 		075AF9D5184780CE00F6BEFF /* Registration.m in Sources */ = {isa = PBXBuildFile; fileRef = 075AF9D4184780CE00F6BEFF /* Registration.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074D743A1886CD8E00761C42 /* OWLHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLHelpers.h; sourceTree = "<group>"; };
+		074D743B1886CD8E00761C42 /* OWLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLHelpers.m; sourceTree = "<group>"; };
 		075AF9CE1847796B00F6BEFF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		075AF9D118477A2700F6BEFF /* hiboux.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hiboux.xcdatamodel; sourceTree = "<group>"; };
 		075AF9D3184780CE00F6BEFF /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registration.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				DDAFC4DC181E6080001D5ECA /* InfoPlist.strings */,
 				DDAFC4DF181E6080001D5ECA /* main.m */,
 				DDAFC4E1181E6080001D5ECA /* hiboux-Prefix.pch */,
+				074D743A1886CD8E00761C42 /* OWLHelpers.h */,
+				074D743B1886CD8E00761C42 /* OWLHelpers.m */,
 			);
 			name = "Supporting Files";
 			path = hiboux;
@@ -343,6 +348,7 @@
 				DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */,
 				DDAFC4ED181E6080001D5ECA /* OWLViewController.m in Sources */,
 				DDAFC4E4181E6080001D5ECA /* OWLAppDelegate.m in Sources */,
+				074D743C1886CD8E00761C42 /* OWLHelpers.m in Sources */,
 				DDB109AC186B3DB100C08FAD /* OWLSelectionViewController.m in Sources */,
 				DDAFC4E0181E6080001D5ECA /* main.m in Sources */,
 				DDB44F6818868C570018AE53 /* NYSliderPopover.m in Sources */,
