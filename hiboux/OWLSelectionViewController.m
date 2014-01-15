@@ -76,6 +76,15 @@
 {
     OWLAddOwlViewController *addView = (OWLAddOwlViewController *) segue.destinationViewController;
     
+    NSArray *speciesInfo = [OWLHelpers speciesInfo];
+    
+    for (NSArray *species in speciesInfo) {
+        if([[species valueForKey:@"Species" ] isEqualToString:[[(UITableViewCell *)sender textLabel] text]]) {
+            [addView.currentRegistration setValue:[species valueForKey:@"Family" ] forKey:@"family"];
+            [addView.currentRegistration setValue:[species valueForKey:@"Class" ] forKey:@"classe"];
+        }
+    }
+    
     [addView.currentRegistration setValue:[[(UITableViewCell *)sender textLabel] text] forKey:@"species"];
     // Pass the selected object to the new view controller.
 }
