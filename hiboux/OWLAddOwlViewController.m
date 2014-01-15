@@ -73,6 +73,9 @@
     OWLAppDelegate *myAppDelegate = (OWLAppDelegate *)[[UIApplication sharedApplication] delegate];
     CLLocation *position = myAppDelegate.locationManager.location;
     
+    // Define a formatter
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    
     // coorX (NSNumber)
     double latitude = position.coordinate.latitude;
     NSNumber *coorX = [NSNumber numberWithDouble:latitude];
@@ -110,7 +113,8 @@
     
     
     // no_ring (NSString)
-    [self.currentRegistration setValue: self.no_ring forKey:@"no_ring"];
+    NSString *no_ring = self.no_ring.text;
+    [self.currentRegistration setValue: no_ring forKey:@"no_ring"];
     
     
     // weight (NSNumber)
@@ -119,17 +123,18 @@
     
     
     // wing_size (NSNumber)
-    NSNumber *wing_size = [NSNumber numberWithInt:20];
+    NSNumber *wing_size = [formatter numberFromString:self.wing_size.text];
     [self.currentRegistration setValue: wing_size forKey:@"wing_size"];
     
     
     // tarse (NSNumber)
-    NSNumber *tarse = [NSNumber numberWithInt:55];
+    NSNumber *tarse = [formatter numberFromString:self.tarse.text];
     [self.currentRegistration setValue: tarse forKey:@"tarse"];
     
     
     // comments (NSString)
-    NSString *comments = @"Ceci est un commentaire";
+    //NSString *comments = self.comments.text;
+    NSString *comments = @"comentaire";
     [self.currentRegistration setValue: comments forKey:@"comments"];
     
     
@@ -157,7 +162,7 @@
     
     
     // temperature (NSNumber)
-    NSNumber *temperature = [NSNumber numberWithInt:20];
+    NSNumber *temperature = [formatter numberFromString:self.temperature.text];
     [self.currentRegistration setValue: temperature forKey:@"temperature"];
     
     
