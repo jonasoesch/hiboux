@@ -28,6 +28,8 @@
 		DDAFC500181E6080001D5ECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */; };
 		DDAFC502181E6080001D5ECA /* hibouxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC501181E6080001D5ECA /* hibouxTests.m */; };
 		DDB109AC186B3DB100C08FAD /* OWLSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB109AB186B3DB100C08FAD /* OWLSelectionViewController.m */; };
+		DDB44F6718868C570018AE53 /* NYPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB44F6418868C570018AE53 /* NYPopover.m */; };
+		DDB44F6818868C570018AE53 /* NYSliderPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB44F6618868C570018AE53 /* NYSliderPopover.m */; };
 		DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,10 @@
 		DDAFC501181E6080001D5ECA /* hibouxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hibouxTests.m; sourceTree = "<group>"; };
 		DDB109AA186B3DB100C08FAD /* OWLSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWLSelectionViewController.h; path = hiboux/OWLSelectionViewController.h; sourceTree = "<group>"; };
 		DDB109AB186B3DB100C08FAD /* OWLSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWLSelectionViewController.m; path = hiboux/OWLSelectionViewController.m; sourceTree = "<group>"; };
+		DDB44F6318868C570018AE53 /* NYPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYPopover.h; sourceTree = "<group>"; };
+		DDB44F6418868C570018AE53 /* NYPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYPopover.m; sourceTree = "<group>"; };
+		DDB44F6518868C570018AE53 /* NYSliderPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSliderPopover.h; sourceTree = "<group>"; };
+		DDB44F6618868C570018AE53 /* NYSliderPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYSliderPopover.m; sourceTree = "<group>"; };
 		DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWLAddOwlViewController.h; path = hiboux/OWLAddOwlViewController.h; sourceTree = "<group>"; };
 		DDDAADC718437B3E00517086 /* OWLAddOwlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWLAddOwlViewController.m; path = hiboux/OWLAddOwlViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +198,7 @@
 		DDAFC4DA181E6080001D5ECA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DDB44F6218868C570018AE53 /* NYSliderPopover */,
 				DDAFC4DB181E6080001D5ECA /* hiboux-Info.plist */,
 				DDAFC4DC181E6080001D5ECA /* InfoPlist.strings */,
 				DDAFC4DF181E6080001D5ECA /* main.m */,
@@ -217,6 +224,17 @@
 				DDAFC4FE181E6080001D5ECA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDB44F6218868C570018AE53 /* NYSliderPopover */ = {
+			isa = PBXGroup;
+			children = (
+				DDB44F6318868C570018AE53 /* NYPopover.h */,
+				DDB44F6418868C570018AE53 /* NYPopover.m */,
+				DDB44F6518868C570018AE53 /* NYSliderPopover.h */,
+				DDB44F6618868C570018AE53 /* NYSliderPopover.m */,
+			);
+			path = NYSliderPopover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,11 +339,13 @@
 				075AF9D218477A2700F6BEFF /* hiboux.xcdatamodeld in Sources */,
 				DDDAADC818437B3E00517086 /* OWLAddOwlViewController.m in Sources */,
 				075AF9D5184780CE00F6BEFF /* Registration.m in Sources */,
+				DDB44F6718868C570018AE53 /* NYPopover.m in Sources */,
 				DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */,
 				DDAFC4ED181E6080001D5ECA /* OWLViewController.m in Sources */,
 				DDAFC4E4181E6080001D5ECA /* OWLAppDelegate.m in Sources */,
 				DDB109AC186B3DB100C08FAD /* OWLSelectionViewController.m in Sources */,
 				DDAFC4E0181E6080001D5ECA /* main.m in Sources */,
+				DDB44F6818868C570018AE53 /* NYSliderPopover.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

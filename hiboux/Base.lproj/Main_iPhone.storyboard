@@ -239,7 +239,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="-20" maxValue="40" id="94m-1r-HeZ">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="-20" maxValue="40" id="94m-1r-HeZ" customClass="NYSliderPopover">
                                 <rect key="frame" x="95" y="197" width="212" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -256,6 +256,7 @@
                         <outlet property="sexeControl" destination="L5X-R7-F4x" id="J0I-KT-Nhw"/>
                         <outlet property="species" destination="MWF-J9-0rs" id="htc-GF-PPf"/>
                         <outlet property="tarse" destination="kEj-NE-vHa" id="Ut1-NH-Ehd"/>
+                        <outlet property="tempSlider" destination="94m-1r-HeZ" id="7Vz-Th-HiS"/>
                         <outlet property="temps" destination="nGf-Os-ykU" id="rG6-TB-pb9"/>
                         <outlet property="weight" destination="BgM-kY-2oL" id="bh2-4W-C6z"/>
                         <outlet property="wing_size" destination="dmr-6U-aAw" id="AwS-bj-P1n"/>

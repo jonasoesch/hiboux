@@ -8,6 +8,7 @@
 
 #import "OWLAddOwlViewController.h"
 #import "OWLAppDelegate.h"
+#import "NYSliderPopover.h"
 
 @interface OWLAddOwlViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *temps;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexeControl;
 @property (weak, nonatomic) IBOutlet UIButton *species;
+@property (weak, nonatomic) IBOutlet NYSliderPopover *tempSlider;
 @property (weak, nonatomic) IBOutlet UITextField *no_ring;
 @property (weak, nonatomic) IBOutlet UITextField *weight;
 @property (weak, nonatomic) IBOutlet UITextField *wing_size;
@@ -192,6 +194,16 @@
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+}
+
+- (IBAction)sliderValueChanged:(id)sender
+{
+    [self updateSliderPopoverText];
+}
+
+- (void)updateSliderPopoverText
+{
+    self.tempSlider.popover.textLabel.text = [NSString stringWithFormat:@"%.2f", self.tempSlider.value];
 }
 
 
