@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *wing_size;
 @property (weak, nonatomic) IBOutlet UITextField *tarse;
 
+@property UITextField *activeField;
+
 
 - (IBAction)done:(id)sender;
 
@@ -49,10 +51,8 @@
     self.currentRegistration = [NSEntityDescription insertNewObjectForEntityForName:@"Registration" inManagedObjectContext:self.context];
     
     [self.scrolly setScrollEnabled:YES];
-    [self.scrolly setContentSize:CGSizeMake(250, 800)];
+    [self.scrolly setContentSize:CGSizeMake(250, 600)];
     
-
-
 }
 
 - (IBAction)unwindToAddOwls:(UIStoryboardSegue *)unwindSegue
@@ -201,28 +201,27 @@
 -(void)viewWillDisappear:(BOOL)animated {
     // unregister for keyboard notifications while not visible.
     [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillShowNotification
-                                                  object:nil];
+                                          name:UIKeyboardWillShowNotification
+                                          object:nil];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillHideNotification
-                                                  object:nil];
-    
+                                          name:UIKeyboardWillHideNotification
+                                          object:nil];
     [super viewWillDisappear:animated];
 }
 
-- (IBAction)tempSliderValueChanged:(id)sender
-{
+
+- (IBAction)tempSliderValueChanged:(id)sender {
     [self updateSliderPopoverText];
-    NSLog(@"Update");
 }
 
 - (void)updateSliderPopoverText
 {
-    self.tempSlider.popover.textLabel.text = [NSString stringWithFormat:@"%0.0f", self.tempSlider.value];
+    self.tempSlider.popover.textLabel.text = [NSString stringWithFormat:@"%0.0f °C", self.tempSlider.value];
 }
 
-#define kOFFSET_FOR_KEYBOARD 200.0
+
+#define kOFFSET_FOR_KEYBOARD 220.0
 
 -(void)keyboardWillShow {
     // Animate the current view out of the way
@@ -249,11 +248,11 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)sender
 {
-        //move the main view, so that the keyboard does not hide it.
-        if  (self.view.frame.origin.y >= 0)
-        {
-            [self setViewMovedUp:YES];
-        }
+    //move the main view, so that the keyboard does not hide it.
+    if  (self.view.frame.origin.y >= 0)
+    {
+        [self setViewMovedUp:YES];
+    }
 }
 
 //method to move the view up/down whenever the keyboard is shown/dismissed
@@ -295,8 +294,4 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
 }
-
-
-
-
 @end
