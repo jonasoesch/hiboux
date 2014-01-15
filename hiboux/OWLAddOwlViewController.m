@@ -76,6 +76,22 @@
     // Define a formatter
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     
+    
+    // family (NSString)
+    NSString *family = @"Strigidae";
+    [self.currentRegistration setValue: family forKey:@"family"];
+    
+    
+    // classe (NSString)
+    NSString *classe = @"Aves";
+    [self.currentRegistration setValue: classe forKey:@"classe"];
+    
+    
+    // timestamp (NSDate)
+    NSDate *today = [NSDate date];
+    [self.currentRegistration setValue: today forKey:@"timestamp"];
+    
+    
     // coorX (NSNumber)
     double latitude = position.coordinate.latitude;
     NSNumber *coorX = [NSNumber numberWithDouble:latitude];
@@ -86,16 +102,18 @@
     double longitude = position.coordinate.longitude;
     NSNumber *coorY = [NSNumber numberWithDouble:longitude];
     [self.currentRegistration setValue: coorY forKey:@"coorY"];
-    
-    
-    // timestamp (NSDate)
-    NSDate *today = [NSDate date];
-    [self.currentRegistration setValue: today forKey:@"timestamp"];
-    
+
     
     // altitude (NSNumber)
     NSNumber *altitude = [NSNumber numberWithInt:position.altitude];
     [self.currentRegistration setValue: altitude forKey:@"altitude"];
+    
+    
+    // sexe (NSString)
+    NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Femelle", nil];
+    int selectedSex = [[self sexeControl] selectedSegmentIndex];
+    self.sexe = sexes[selectedSex];
+    [self.currentRegistration setValue: self.sexe forKey:@"sexe"];
     
     
     // age (NSNumber)
@@ -105,11 +123,16 @@
     [self.currentRegistration setValue: ageCorrect forKey:@"age"];
     
     
-    // sexe (NSString)
-    NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Femelle", nil];
-    int selectedSex = [[self sexeControl] selectedSegmentIndex];
-    self.sexe = sexes[selectedSex];
-    [self.currentRegistration setValue: self.sexe forKey:@"sexe"];
+    // statusWeather (NSString)
+    int temps = [[self temps] selectedSegmentIndex];
+    NSArray *arrayTemps = [NSArray arrayWithObjects:@"sun", @"rain", @"cloudy", @"fog", @"period of sunshine", @"snow", nil];
+    NSString *statusWeather = arrayTemps[temps];
+    [self.currentRegistration setValue: statusWeather forKey:@"statusWeather"];
+    
+    
+    // temperature (NSNumber)
+    NSNumber *temperature = [NSNumber numberWithFloat:self.tempSlider.value];
+    [self.currentRegistration setValue: temperature forKey:@"temperature"];
     
     
     // no_ring (NSString)
@@ -138,60 +161,39 @@
     [self.currentRegistration setValue: comments forKey:@"comments"];
     
     
-    // classe (NSString)
-    NSString *classe = @"Aves";
-    [self.currentRegistration setValue: classe forKey:@"classe"];
-    
-    
-    // family (NSString)
-    NSString *family = @"Strigidae";
-    [self.currentRegistration setValue: family forKey:@"family"];
-    
-    
     // locationName (NSString)
-    NSString *locationName = @"Mt Hibou";
+    NSString *locationName = @"Mt Hiboux";
     [self.currentRegistration setValue: locationName forKey:@"locationName"];
-    
-    
-    // statusWeather (NSString)
-    int temps = [[self temps] selectedSegmentIndex];
-    NSArray *arrayTemps = [NSArray arrayWithObjects:@"sun", @"rain", @"cloudy", @"fog", @"period of sunshine", @"snow", nil];
-    NSString *statusWeather = arrayTemps[temps];
-    [self.currentRegistration setValue: statusWeather forKey:@"statusWeather"];
-    
-    
-    // temperature (NSNumber)
-    NSNumber *temperature = [NSNumber numberWithFloat:self.tempSlider.value];
-    [self.currentRegistration setValue: temperature forKey:@"temperature"];
     
     
     NSError *error;
     [self.context save:&error];
     
     
-    
     //NSLog(@"Lat: %f / Long: %f / Alt: %@", latitude, longitude, altitude);
-    
-    //NSLog(@"Age: %i", age);
-    //NSLog(@"Sexe: %@", self.sexe);
 
+    NSLog(@"species: %@",       [self.currentRegistration valueForKey:@"species"] );
+    NSLog(@"family: %@",        [self.currentRegistration valueForKey:@"family"] );
+    NSLog(@"class: %@",         [self.currentRegistration valueForKey:@"classe"] );
+    
+    NSLog(@"timestamp: %@",     [self.currentRegistration valueForKey:@"timestamp"] );
+    
     NSLog(@"coorX: %@",         [self.currentRegistration valueForKey:@"coorX"] );
     NSLog(@"coorY: %@",         [self.currentRegistration valueForKey:@"coorY"] );
-    NSLog(@"timestamp: %@",     [self.currentRegistration valueForKey:@"timestamp"] );
     NSLog(@"altitude: %@",      [self.currentRegistration valueForKey:@"altitude"] );
-    NSLog(@"age: %@",           [self.currentRegistration valueForKey:@"age"] );
+    
     NSLog(@"sexe: %@",          [self.currentRegistration valueForKey:@"sexe"] );
+    NSLog(@"age: %@",           [self.currentRegistration valueForKey:@"age"] );
+    NSLog(@"statusWeather: %@", [self.currentRegistration valueForKey:@"statusWeather"] );
+    NSLog(@"temperature: %@",   [self.currentRegistration valueForKey:@"temperature"] );
+    
     NSLog(@"no_ring: %@",       [self.currentRegistration valueForKey:@"no_ring"] );
     NSLog(@"weight: %@",        [self.currentRegistration valueForKey:@"weight"] );
     NSLog(@"wing_size: %@",     [self.currentRegistration valueForKey:@"wing_size"] );
     NSLog(@"tarse: %@",         [self.currentRegistration valueForKey:@"tarse"] );
     NSLog(@"comments: %@",      [self.currentRegistration valueForKey:@"comments"] );
-    NSLog(@"species: %@",       [self.currentRegistration valueForKey:@"species"] );
-    NSLog(@"family: %@",        [self.currentRegistration valueForKey:@"family"] );
-    NSLog(@"locationName: %@",  [self.currentRegistration valueForKey:@"locationName"] );
-    NSLog(@"statusWeather: %@", [self.currentRegistration valueForKey:@"statusWeather"] );
-    NSLog(@"temperature: %@",   [self.currentRegistration valueForKey:@"temperature"] );
     
+    NSLog(@"locationName: %@",  [self.currentRegistration valueForKey:@"locationName"] );
     
     
 }
