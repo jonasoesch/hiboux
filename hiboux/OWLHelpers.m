@@ -29,4 +29,51 @@
     return objects;
 }
 
++ (NSArray *)speciesInfo {
+    return
+    @[
+     @{
+         @"Species": @"Chouette hulotte",
+         @"Family": @"Strigidae",
+         @"Class": @"Aves"
+         },
+     @{
+         @"Species": @"Nyctale de Tengmalm",
+         @"Family": @"Strigidae",
+         @"Class": @"Aves"
+         },
+     @{
+         @"Species": @"Chevêchette d'Europe",
+         @"Family": @"Strigidae",
+         @"Class": @"Aves"
+         },
+     @{
+         @"Species": @"Chouette effraie",
+         @"Family": @"Tytonidae",
+         @"Class": @"Aves"
+         },
+     @{
+         @"Species": @"Chevêche d'Athéna",
+         @"Family": @"Strigidae",
+         @"Class": @"Aves"
+         },
+     @{
+         @"Species": @"Petit-duc scops",
+         @"Family": @"Strigidae",
+         @"Class": @"Aves"
+         },
+     @{
+         @"Species": @"Hibou moyen-duc",
+         @"Family": @"Strigidae",
+         @"Class": @"Aves"
+         },
+     @{
+         @"Species": @"Hibou grand-duc",
+         @"Family": @"Strigidae",
+         @"Class": @"Aves"
+         }
+     
+     ];
+}
+
 @end

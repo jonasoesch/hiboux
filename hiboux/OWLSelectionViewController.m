@@ -7,6 +7,7 @@
 //
 
 #import "OWLSelectionViewController.h"
+#import "OWLHelpers.h"
 
 @interface OWLSelectionViewController ()
 
@@ -29,11 +30,14 @@
 {
     [super viewDidLoad];
 
-    self.species = [NSArray arrayWithObjects:
-                    @"Asio abyssinicus",
-                    @"Asio capensis",
-                    @"Bubo bubo",
-                    nil];
+    NSArray *speciesInfo = [OWLHelpers speciesInfo];
+    
+    NSMutableArray *speciesArray = [[NSMutableArray alloc] initWithCapacity:[speciesInfo count]];
+    for (int i = 0; i<[speciesInfo count]; i++) {
+        [speciesArray addObject:speciesInfo[i][@"Species"]];
+    }
+    NSLog(@"%@", speciesArray);
+    self.species =speciesArray;
 }
 
 - (void)didReceiveMemoryWarning

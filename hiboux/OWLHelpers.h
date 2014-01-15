@@ -12,5 +12,6 @@
 @interface OWLHelpers : NSObject
 
 + (NSArray *)getOwls;
++ (NSArray *)speciesInfo;
 
 @end
