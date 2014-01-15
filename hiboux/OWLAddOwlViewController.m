@@ -68,14 +68,18 @@
 
 - (IBAction)done:(id)sender {
     
+    OWLAppDelegate *myAppDelegate = (OWLAppDelegate *)[[UIApplication sharedApplication] delegate];
+    CLLocation *position = myAppDelegate.locationManager.location;
     
     // coorX (NSNumber)
-    NSNumber *coorX = [NSNumber numberWithInt:37.30411079];
+    double latitude = position.coordinate.latitude;
+    NSNumber *coorX = [NSNumber numberWithDouble:latitude];
     [self.currentRegistration setValue: coorX forKey:@"coorX"];
     
     
     // coorY (NSNumber)
-    NSNumber *coorY = [NSNumber numberWithInt:-121.97536127];
+    double longitude = position.coordinate.longitude;
+    NSNumber *coorY = [NSNumber numberWithDouble:longitude];
     [self.currentRegistration setValue: coorY forKey:@"coorY"];
     
     
@@ -85,7 +89,7 @@
     
     
     // altitude (NSNumber)
-    NSNumber *altitude = [NSNumber numberWithInt:500.23];
+    NSNumber *altitude = [NSNumber numberWithInt:position.altitude];
     [self.currentRegistration setValue: altitude forKey:@"altitude"];
     
     
@@ -104,8 +108,7 @@
     
     
     // no_ring (NSString)
-    NSString *no_ring = @"1234B";
-    [self.currentRegistration setValue: no_ring forKey:@"no_ring"];
+    [self.currentRegistration setValue: self.no_ring forKey:@"no_ring"];
     
     
     // weight (NSNumber)
@@ -160,17 +163,11 @@
     [self.context save:&error];
     
     
-    OWLAppDelegate *myAppDelegate = (OWLAppDelegate *)[[UIApplication sharedApplication] delegate];
-    CLLocation *position = myAppDelegate.locationManager.location;
-    double latitude = position.coordinate.latitude;
-    double longitude = position.coordinate.longitude;
-    altitude = [NSNumber numberWithInt:position.altitude];
     
-    NSLog(@"Lat: %f / Long: %f / Alt: %@", latitude, longitude, altitude);
+    //NSLog(@"Lat: %f / Long: %f / Alt: %@", latitude, longitude, altitude);
     
-    NSLog(@"Age: %i", age);
-    NSLog(@"Sexe: %@", self.sexe);
-    NSLog(@"Timestamp: %@", [self timestamp]);
+    //NSLog(@"Age: %i", age);
+    //NSLog(@"Sexe: %@", self.sexe);
 
     NSLog(@"coorX: %@",         [self.currentRegistration valueForKey:@"coorX"] );
     NSLog(@"coorY: %@",         [self.currentRegistration valueForKey:@"coorY"] );
