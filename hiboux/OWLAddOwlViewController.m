@@ -62,7 +62,7 @@
 
     
     NSString *lastOwlWeather = [[OWLHelpers getLastOwl] valueForKey:@"statusWeather"];
-    int lastOwlWeatherIndex = [[OWLHelpers weatherInfo] indexOfObject:lastOwlWeather];
+    NSUInteger lastOwlWeatherIndex = [[OWLHelpers weatherInfo] indexOfObject:lastOwlWeather];
     [self.weather setSelectedSegmentIndex:lastOwlWeatherIndex];
     
     NSNumber *lastOwlTemperature =[[OWLHelpers getLastOwl] valueForKey:@"temperature"];
@@ -222,14 +222,14 @@
     NSDictionary* info = [aNotification userInfo];
     CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height+20, 0.0);
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height+40, 0.0);
     self.scrolly.contentInset = contentInsets;
     self.scrolly.scrollIndicatorInsets = contentInsets;
     
     // If active text field is hidden by keyboard, scroll it so it's visible
     // Your app might not need or want this behavior.
     CGRect aRect = self.view.frame;
-    aRect.size.height -= keyboardSize.height+20;
+    aRect.size.height -= keyboardSize.height+40;
     if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
         [self.scrolly scrollRectToVisible:self.activeField.frame animated:YES];
     }
