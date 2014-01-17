@@ -93,4 +93,18 @@
     return @[@"sun", @"rain", @"cloudy", @"fog", @"period of sunshine", @"snow"];
 }
 
++ (void)deleteOwls
+{
+    OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Registration" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    
+    NSArray *allData = [context executeFetchRequest:request error:NULL];
+    
+    for (NSManagedObject *obj in allData) {
+        [context deleteObject:obj];
+    }
+}
 @end

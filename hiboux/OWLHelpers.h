@@ -16,5 +16,6 @@
 + (NSArray *)speciesInfo;
 + (Registration *)getLastOwl;
 + (NSArray *)weatherInfo;
++ (void)deleteOwls;
 
 @end
