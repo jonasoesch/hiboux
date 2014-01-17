@@ -100,15 +100,150 @@
 
 
 - (void)saveJSON {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-LL-d H:m:s Z"];
     
-    NSArray *objects = [OWLHelpers getOwls];
+    NSArray *owls = [OWLHelpers getOwls];
     
-    //NSLog(@"%@", objects);
     
-    //NSData *dataJSON = [NSJSONSerialization dataWithJSONObject:objects options:NSJSONWritingPrettyPrinted error:NULL];
+    NSMutableArray *keyArray = [[NSMutableArray alloc] init];
+    [keyArray addObject:@"coorX"];
+    [keyArray addObject:@"coorY"];
+    [keyArray addObject:@"timestamp"];
+    [keyArray addObject:@"altitude"];
+    [keyArray addObject:@"age"];
+    [keyArray addObject:@"sexe"];
+    [keyArray addObject:@"no_ring"];
+    [keyArray addObject:@"weight"];
+    [keyArray addObject:@"wing_size"];
+    [keyArray addObject:@"tarse"];
+    [keyArray addObject:@"comments"];
+    [keyArray addObject:@"species"];
+    [keyArray addObject:@"class"];
+    [keyArray addObject:@"family"];
+    [keyArray addObject:@"locationName"];
+    [keyArray addObject:@"statusWeather"];
+    [keyArray addObject:@"temperature"];
     
-    //NSLog(@"%@", dataJSON);
+    NSMutableArray *arrayOfDicts = [[NSMutableArray alloc] init];
     
+    for (NSObject *owl in owls) {
+        
+        NSMutableArray *valueArray = [[NSMutableArray alloc] init];
+        if ([owl valueForKey:@"coorX"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"coorX"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"coorY"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"coorY"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"timestamp"] != nil) {
+            NSString *time = [formatter stringFromDate:[owl valueForKey:@"timestamp"]];
+            [valueArray addObject:time];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"altitude"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"altitude"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"age"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"age"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"sexe"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"sexe"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"no_ring"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"no_ring"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"weight"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"weight"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"wing_size"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"wing_size"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"tarse"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"tarse"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"comments"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"comments"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"species"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"species"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"classe"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"classe"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"family"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"family"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"locationName"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"locationName"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"statusWeather"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"statusWeather"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        if ([owl valueForKey:@"temperature"] != nil) {
+            [valueArray addObject:[owl valueForKey:@"temperature"]];
+        } else {
+            [valueArray addObject:[NSNull null]];
+        }
+        
+        NSDictionary *dict = [NSDictionary dictionaryWithObjects:valueArray forKeys:keyArray];
+        [arrayOfDicts addObject:dict];
+        
+    }
+    
+    NSArray *info = [NSArray arrayWithArray:arrayOfDicts];
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:info options:NSJSONWritingPrettyPrinted error:NULL];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"%@", jsonString);
 }
 
 @end

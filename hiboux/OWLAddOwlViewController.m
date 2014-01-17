@@ -8,7 +8,7 @@
 
 #import "OWLAddOwlViewController.h"
 #import "OWLAppDelegate.h"
-#import "NYSliderPopover.h"
+#import "NYSliderPopover.h" 
 
 @interface OWLAddOwlViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
@@ -77,16 +77,6 @@
     
     // Define a formatter
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    
-    
-    // family (NSString)
-    NSString *family = @"Strigidae";
-    [self.currentRegistration setValue: family forKey:@"family"];
-    
-    
-    // classe (NSString)
-    NSString *classe = @"Aves";
-    [self.currentRegistration setValue: classe forKey:@"classe"];
     
     
     // timestamp (NSDate)
