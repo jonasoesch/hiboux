@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "OWLAppDelegate.h"
+#import "Registration.h"
 
 @interface OWLHelpers : NSObject
 
 + (NSArray *)getOwls;
 + (NSArray *)speciesInfo;
++ (Registration *)getLastOwl;
 
 @end

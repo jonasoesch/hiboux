@@ -33,7 +33,7 @@
     [super viewDidLoad];
 	
     [self updateOwls];
-
+    NSLog(@"%@", [[OWLHelpers getLastOwl] valueForKey:@"age"]);
 
 }
 

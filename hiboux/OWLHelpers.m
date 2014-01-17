@@ -76,4 +76,15 @@
      ];
 }
 
++ (Registration *)getLastOwl
+{
+    NSArray *theOwls = [OWLHelpers getOwls];
+    if ([theOwls count] > 0) {
+        return [OWLHelpers getOwls][[theOwls count] -1];
+    }
+    else {
+        return NULL;
+    }
+}
+
 @end
