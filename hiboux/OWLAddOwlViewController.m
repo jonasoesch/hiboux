@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *weight;
 @property (weak, nonatomic) IBOutlet UITextField *wing_size;
 @property (weak, nonatomic) IBOutlet UITextField *tarse;
+@property (weak, nonatomic) IBOutlet UITextField *comment;
 
 @property UITextField *activeField;
 
@@ -177,9 +178,8 @@
     
     
     // comments (NSString)
-    //NSString *comments = self.comments.text;
-    NSString *comments = @"comentaire";
-    [self.currentRegistration setValue: comments forKey:@"comments"];
+    NSString *comments = self.comment.text;
+    [self.currentRegistration setValue:comments forKey:@"comments"];
     
     
     // locationName (NSString)
@@ -270,6 +270,13 @@
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
+    self.scrolly.contentInset = contentInsets;
+    self.scrolly.scrollIndicatorInsets = contentInsets;
+    
+    [self.scrolly setScrollEnabled:YES];
+    [self.scrolly setContentSize:CGSizeMake(320, 540)];
 }
 
 #pragma mark -

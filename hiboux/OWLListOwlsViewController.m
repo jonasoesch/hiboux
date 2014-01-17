@@ -43,7 +43,6 @@
     NSArray *objects = [OWLHelpers getOwls];
     
     self.owls = objects;
-    NSLog(@"%i", [self.owls count]);
     
     [self.tableView reloadData];
 }
