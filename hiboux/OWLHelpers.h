@@ -15,5 +15,6 @@
 + (NSArray *)getOwls;
 + (NSArray *)speciesInfo;
 + (Registration *)getLastOwl;
++ (NSArray *)weatherInfo;
 
 @end

@@ -80,11 +80,17 @@
 {
     NSArray *theOwls = [OWLHelpers getOwls];
     if ([theOwls count] > 0) {
-        return [OWLHelpers getOwls][[theOwls count] -1];
-    }
-    else {
+        return [OWLHelpers getOwls][0];
+    } else
+    {
         return NULL;
     }
+    
+}
+
++ (NSArray *)weatherInfo
+{
+    return @[@"sun", @"rain", @"cloudy", @"fog", @"period of sunshine", @"snow"];
 }
 
 @end

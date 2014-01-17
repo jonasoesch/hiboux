@@ -12,6 +12,7 @@
 
 @interface OWLAddOwlViewController : UIViewController
 
+@property NSString *species;
 @property NSString *sexe;
 @property NSManagedObject *currentRegistration;
 @property NSManagedObjectContext *context;

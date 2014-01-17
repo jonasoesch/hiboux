@@ -268,10 +268,10 @@
                         <outlet property="no_ring" destination="sBJ-F4-18C" id="mNZ-mi-8BG"/>
                         <outlet property="scrolly" destination="C6x-ua-yHD" id="sFg-48-VJ2"/>
                         <outlet property="sexeControl" destination="L5X-R7-F4x" id="J0I-KT-Nhw"/>
-                        <outlet property="species" destination="MWF-J9-0rs" id="htc-GF-PPf"/>
+                        <outlet property="speciesButton" destination="MWF-J9-0rs" id="T4L-97-gK7"/>
                         <outlet property="tarse" destination="kEj-NE-vHa" id="Ut1-NH-Ehd"/>
                         <outlet property="tempSlider" destination="94m-1r-HeZ" id="7Vz-Th-HiS"/>
-                        <outlet property="temps" destination="nGf-Os-ykU" id="rG6-TB-pb9"/>
+                        <outlet property="weather" destination="nGf-Os-ykU" id="Ezc-mm-Xoz"/>
                         <outlet property="weight" destination="BgM-kY-2oL" id="bh2-4W-C6z"/>
                         <outlet property="wing_size" destination="dmr-6U-aAw" id="AwS-bj-P1n"/>
                     </connections>

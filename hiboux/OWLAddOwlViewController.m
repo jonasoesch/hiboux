@@ -9,14 +9,15 @@
 #import "OWLAddOwlViewController.h"
 #import "OWLAppDelegate.h"
 #import "NYSliderPopover.h" 
+#import "OWLHelpers.h"
 
 @interface OWLAddOwlViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
 @property NSDate *timestamp;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *age;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *temps;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *weather;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexeControl;
-@property (weak, nonatomic) IBOutlet UIButton *species;
+@property (weak, nonatomic) IBOutlet UIButton *speciesButton;
 @property (weak, nonatomic) IBOutlet NYSliderPopover *tempSlider;
 @property (weak, nonatomic) IBOutlet UITextField *no_ring;
 @property (weak, nonatomic) IBOutlet UITextField *weight;
@@ -52,6 +53,20 @@
     
     [self.scrolly setScrollEnabled:YES];
     [self.scrolly setContentSize:CGSizeMake(320, 540)];
+
+    
+    NSString *lastOwlSpecies = [[OWLHelpers getLastOwl] valueForKey:@"Species"];
+    lastOwlSpecies = (lastOwlSpecies != NULL) ? lastOwlSpecies : @"%%Chouette hulotte";
+    [self.speciesButton setTitle: lastOwlSpecies forState:UIControlStateNormal];
+
+    
+    NSString *lastOwlWeather = [[OWLHelpers getLastOwl] valueForKey:@"statusWeather"];
+    int lastOwlWeatherIndex = [[OWLHelpers weatherInfo] indexOfObject:lastOwlWeather];
+    [self.weather setSelectedSegmentIndex:lastOwlWeatherIndex];
+    
+    NSNumber *lastOwlTemperature =[[OWLHelpers getLastOwl] valueForKey:@"temperature"];
+    [self.tempSlider setValue:[lastOwlTemperature floatValue] animated:YES];
+    
     
     [self registerForKeyboardNotifications];
     
@@ -61,7 +76,7 @@
 {
     OWLSelectionViewController *source = unwindSegue.sourceViewController;
     
-    [self.species setTitle: [self.currentRegistration valueForKey:@"species"] forState:UIControlStateNormal];
+    [self.speciesButton setTitle: self.species forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,6 +109,21 @@
     double longitude = position.coordinate.longitude;
     NSNumber *coorY = [NSNumber numberWithDouble:longitude];
     [self.currentRegistration setValue: coorY forKey:@"coorY"];
+    
+    
+    // Species
+    // Family
+    // Class
+    NSString *species = [[self.speciesButton titleLabel] text];
+    NSArray *speciesInfo = [OWLHelpers speciesInfo];
+    [self.currentRegistration setValue:species forKey:@"Species"];
+    
+    for (NSArray *currSpecies in speciesInfo) {
+        if([[currSpecies valueForKey:@"Species" ] isEqualToString:species]) {
+            [self.currentRegistration setValue:[currSpecies valueForKey:@"Family" ] forKey:@"family"];
+            [self.currentRegistration setValue:[currSpecies valueForKey:@"Class" ] forKey:@"classe"];
+        }
+    }
 
     
     // altitude (NSNumber)
@@ -116,9 +146,8 @@
     
     
     // statusWeather (NSString)
-    int temps = [[self temps] selectedSegmentIndex];
-    NSArray *arrayTemps = [NSArray arrayWithObjects:@"sun", @"rain", @"cloudy", @"fog", @"period of sunshine", @"snow", nil];
-    NSString *statusWeather = arrayTemps[temps];
+    int temps = [self.weather selectedSegmentIndex];
+    NSString *statusWeather = [OWLHelpers weatherInfo][temps];
     [self.currentRegistration setValue: statusWeather forKey:@"statusWeather"];
     
     
@@ -161,31 +190,6 @@
     NSError *error;
     [self.context save:&error];
     
-    
-    //NSLog(@"Lat: %f / Long: %f / Alt: %@", latitude, longitude, altitude);
-
-    NSLog(@"species: %@",       [self.currentRegistration valueForKey:@"species"] );
-    NSLog(@"family: %@",        [self.currentRegistration valueForKey:@"family"] );
-    NSLog(@"class: %@",         [self.currentRegistration valueForKey:@"classe"] );
-    
-    NSLog(@"timestamp: %@",     [self.currentRegistration valueForKey:@"timestamp"] );
-    
-    NSLog(@"coorX: %@",         [self.currentRegistration valueForKey:@"coorX"] );
-    NSLog(@"coorY: %@",         [self.currentRegistration valueForKey:@"coorY"] );
-    NSLog(@"altitude: %@",      [self.currentRegistration valueForKey:@"altitude"] );
-    
-    NSLog(@"sexe: %@",          [self.currentRegistration valueForKey:@"sexe"] );
-    NSLog(@"age: %@",           [self.currentRegistration valueForKey:@"age"] );
-    NSLog(@"statusWeather: %@", [self.currentRegistration valueForKey:@"statusWeather"] );
-    NSLog(@"temperature: %@",   [self.currentRegistration valueForKey:@"temperature"] );
-    
-    NSLog(@"no_ring: %@",       [self.currentRegistration valueForKey:@"no_ring"] );
-    NSLog(@"weight: %@",        [self.currentRegistration valueForKey:@"weight"] );
-    NSLog(@"wing_size: %@",     [self.currentRegistration valueForKey:@"wing_size"] );
-    NSLog(@"tarse: %@",         [self.currentRegistration valueForKey:@"tarse"] );
-    NSLog(@"comments: %@",      [self.currentRegistration valueForKey:@"comments"] );
-    
-    NSLog(@"locationName: %@",  [self.currentRegistration valueForKey:@"locationName"] );
     
     
 }
