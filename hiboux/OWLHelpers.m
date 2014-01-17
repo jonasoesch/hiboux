@@ -106,5 +106,8 @@
     for (NSManagedObject *obj in allData) {
         [context deleteObject:obj];
     }
+    
+    NSError *error;
+    [context save:&error];
 }
 @end
