@@ -79,7 +79,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSManagedObject *owl = [self.owls objectAtIndex:indexPath.row];
     cell.textLabel.text = [owl valueForKey:@"species"];
-    cell.detailTextLabel.text = [[owl valueForKey:@"timestamp"] description];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.LL.yyyy 'à' H:m"];
+    cell.detailTextLabel.text = [[formatter stringFromDate:[owl valueForKey:@"timestamp"]] description];
     return cell;
 }
 
