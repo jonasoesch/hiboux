@@ -57,7 +57,7 @@
 
     
     NSString *lastOwlSpecies = [[OWLHelpers getLastOwl] valueForKey:@"Species"];
-    lastOwlSpecies = (lastOwlSpecies != NULL) ? lastOwlSpecies : @"%%Chouette hulotte";
+    lastOwlSpecies = (lastOwlSpecies != NULL) ? lastOwlSpecies : @"Chouette hulotte";
     [self.speciesButton setTitle: lastOwlSpecies forState:UIControlStateNormal];
 
     
