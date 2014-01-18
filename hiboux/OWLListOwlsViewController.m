@@ -274,4 +274,15 @@
     }
 }
 
+
+// Override to support editing the table view.
+// for swipe to delete
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"%ld", (long)indexPath.row);
+        [OWLHelpers deleteOwlatIndex:(int)indexPath.row];
+        [self updateOwls];
+    }
+}
+
 @end

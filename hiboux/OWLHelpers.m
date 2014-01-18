@@ -27,6 +27,7 @@
     NSArray *objects = [context executeFetchRequest:request error:&error];
     
     return objects;
+    
 }
 
 + (NSArray *)speciesInfo {
@@ -106,6 +107,22 @@
     for (NSManagedObject *obj in allData) {
         [context deleteObject:obj];
     }
+    
+    NSError *error;
+    [context save:&error];
+}
+
++ (void)deleteOwlatIndex:(int) index
+{
+    OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Registration" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    
+    NSArray *allData = [context executeFetchRequest:request error:NULL];
+    
+    [context deleteObject: [allData objectAtIndex:index]];
     
     NSError *error;
     [context save:&error];

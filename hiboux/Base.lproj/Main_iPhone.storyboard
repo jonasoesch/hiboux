@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--List Owls View Controller - Title-->
+        <!--List Owls View Controller - Catch'em Owl-->
         <scene sceneID="UkJ-zO-O0K">
             <objects>
                 <tableViewController id="ISh-fc-ITo" customClass="OWLListOwlsViewController" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OWLEntry" textLabel="JV5-Tc-k5y" detailTextLabel="RJw-Dq-LTt" style="IBUITableViewCellStyleSubtitle" id="IOi-mI-BRy">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OWLEntry" textLabel="JV5-Tc-k5y" detailTextLabel="RJw-Dq-LTt" style="IBUITableViewCellStyleSubtitle" id="IOi-mI-BRy">
                                 <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IOi-mI-BRy" id="cbO-Y5-WY6">
@@ -53,7 +53,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="z8X-iz-lHd">
+                    <navigationItem key="navigationItem" title="Catch'em Owl" id="z8X-iz-lHd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xBt-7L-zKL">
                             <color key="tintColor" red="0.77235478940000002" green="0.21262215100000001" blue="0.16654806329999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
