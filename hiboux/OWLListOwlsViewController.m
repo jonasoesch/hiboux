@@ -100,14 +100,17 @@
     
 }
 
-
+// Send Owls to hibou.yoanngern.ch
 - (void)saveJSON {
+    
+    // Define a date formatter
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-LL-d H:m:s Z"];
     
+    // get Owls in the internal DB
     NSArray *owls = [OWLHelpers getOwls];
     
-    
+    // Define key for JSON Array
     NSMutableArray *keyArray = [[NSMutableArray alloc] init];
     [keyArray addObject:@"coorX"];
     [keyArray addObject:@"coorY"];
@@ -129,6 +132,7 @@
     
     NSMutableArray *arrayOfDicts = [[NSMutableArray alloc] init];
     
+    // Check all elements one by one to control what we send in the JSON Array
     for (NSObject *owl in owls) {
         
         NSMutableArray *valueArray = [[NSMutableArray alloc] init];
@@ -145,6 +149,7 @@
         }
         
         if ([owl valueForKey:@"timestamp"] != nil) {
+            // Format the date to String
             NSString *time = [formatter stringFromDate:[owl valueForKey:@"timestamp"]];
             [valueArray addObject:time];
         } else {
@@ -245,14 +250,14 @@
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:info options:NSJSONWritingPrettyPrinted error:NULL];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
-    NSLog(@"%@", jsonString);
-    
+    // Create the POST parameter
     NSString *post = [[NSString alloc] initWithFormat:@"owls=%@",jsonString];
 
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
     
+    // Create the request
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:@"http://hibou.yoanngern.ch/test.php"]];
     [request setHTTPMethod:@"POST"];
@@ -262,10 +267,11 @@
     
     NSHTTPURLResponse *response = nil;
     NSError *error = nil;
+    
+    // Send JSON to hibou.yoanngern.ch
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    //NSDictionary *dict = [response allHeaderFields];
-    
+    // If there is no problem, delete internal data
     if ([response statusCode] == 200) {
         [OWLHelpers deleteOwls];
         [self updateOwls];
