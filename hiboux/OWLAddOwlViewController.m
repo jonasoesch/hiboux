@@ -152,7 +152,7 @@
         NSNumber *altitude = [NSNumber numberWithInt:position.altitude];
     }
     */
-    [currentRegistration setValue:NULL forKey:@"altitude"];
+    [currentRegistration setValue:[NSNumber numberWithInt:0] forKey:@"altitude"];
     
     
     // sexe (NSString)

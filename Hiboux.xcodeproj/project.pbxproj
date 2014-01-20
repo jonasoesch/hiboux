@@ -291,7 +291,7 @@
 				ORGANIZATIONNAME = "Jonas Oesch";
 				TargetAttributes = {
 					DDAFC4CF181E6080001D5ECA = {
-						DevelopmentTeam = 53KE5Z8SL9;
+						DevelopmentTeam = AL26DWR55R;
 					};
 					DDAFC4F3181E6080001D5ECA = {
 						TestTargetID = DDAFC4CF181E6080001D5ECA;

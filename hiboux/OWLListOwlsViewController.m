@@ -255,6 +255,7 @@
     
     // Create the POST parameter
     NSString *post = [[NSString alloc] initWithFormat:@"owls=%@",jsonString];
+    NSLog(@"%@", jsonString);
 
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     

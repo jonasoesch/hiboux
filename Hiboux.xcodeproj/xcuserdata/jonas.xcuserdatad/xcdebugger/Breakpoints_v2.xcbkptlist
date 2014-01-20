@@ -14,9 +14,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
+            endingLineNumber = "113">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
