@@ -156,7 +156,7 @@
     
     
     // sexe (NSString)
-    NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Femelle", nil];
+    NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Female", nil];
     int selectedSex = [[self sexeControl] selectedSegmentIndex];
     NSString *sexe = sexes[selectedSex];
     [currentRegistration setValue: sexe forKey:@"sexe"];
