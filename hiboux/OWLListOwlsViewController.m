@@ -4,7 +4,9 @@
 //
 //  Created by Jonas Oesch on 25.11.13.
 //  Copyright (c) 2013 Jonas Oesch. All rights reserved.
-//
+
+// Shows a list of recorded owls.
+// Allows to add a record, to send all records to the server or to delete a record
 
 #import "OWLListOwlsViewController.h"
 #import "OWLAddOwlViewController.h"
@@ -13,69 +15,72 @@
 
 @interface OWLListOwlsViewController ()
 
+// This is the data source for the ListView
 @property NSArray *owls;
 
 @end
 
 @implementation OWLListOwlsViewController
 
+
+// This method is called when creating a new instance
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // No custom init code
     }
     return self;
 }
 
+// This method is called when the view is shown for the first time
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
     [self updateOwls];
-    NSLog(@"%@", [[OWLHelpers getLastOwl] valueForKey:@"age"]);
 
 }
 
-
+// Gets the current records from persistence and updates the tableView
 -(void)updateOwls
 {
     NSArray *objects = [OWLHelpers getOwls];
-    
     self.owls = objects;
-    
     [self.tableView reloadData];
 }
 
+// Throws away objects that aren't needed when memory is low
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+// This method is called when coming back from AddOwlView
+// It updates and reloads the tableView
 - (IBAction)unwindToListOwls:(UIStoryboardSegue *)unwindSegue
 {
-    OWLAddOwlViewController *source = unwindSegue.sourceViewController;
-    NSLog(@"Returned form segue: %@", source.sexe);
-    
     [self updateOwls];
 }
 
 
+// No sections for our tableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
+// Tells the tableView how many lines it needs to prepare
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
     return [self.owls count];
 }
 
+
+// Defines the content of a tableView cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"OWLEntry";
+    NSString *CellIdentifier = @"OWLEntry";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSManagedObject *owl = [self.owls objectAtIndex:indexPath.row];
     cell.textLabel.text = [owl valueForKey:@"species"];
@@ -87,11 +92,7 @@
 }
 
 
-
-
- 
-
-
+// Called when the send button is pressed
 - (IBAction)send:(id)sender {
 
     NSLog(@"Send");
@@ -107,10 +108,11 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-LL-d H:m:s Z"];
     
-    // get Owls in the internal DB
+    // get the data from persistence
+    // Because we can't risk to loose any data we reload it directly from persistence
     NSArray *owls = [OWLHelpers getOwls];
     
-    // Define key for JSON Array
+    // Define keys for JSON Array
     NSMutableArray *keyArray = [[NSMutableArray alloc] init];
     [keyArray addObject:@"coorX"];
     [keyArray addObject:@"coorY"];
@@ -132,10 +134,11 @@
     
     NSMutableArray *arrayOfDicts = [[NSMutableArray alloc] init];
     
-    // Check all elements one by one to control what we send in the JSON Array
+    // Check all elements one by one to be sure about what we send in the JSON Array
     for (NSObject *owl in owls) {
         
         NSMutableArray *valueArray = [[NSMutableArray alloc] init];
+        
         if ([owl valueForKey:@"coorX"] != nil) {
             [valueArray addObject:[owl valueForKey:@"coorX"]];
         } else {
