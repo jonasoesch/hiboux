@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDAFC4CF181E6080001D5ECA"
-               BuildableName = "hiboux.app"
-               BlueprintName = "hiboux"
-               ReferencedContainer = "container:hiboux.xcodeproj">
+               BuildableName = "Hiboux.app"
+               BlueprintName = "Hiboux"
+               ReferencedContainer = "container:Hiboux.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDAFC4F3181E6080001D5ECA"
-               BuildableName = "hibouxTests.xctest"
-               BlueprintName = "hibouxTests"
-               ReferencedContainer = "container:hiboux.xcodeproj">
+               BuildableName = "HibouxTests.xctest"
+               BlueprintName = "HibouxTests"
+               ReferencedContainer = "container:Hiboux.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDAFC4CF181E6080001D5ECA"
-            BuildableName = "hiboux.app"
-            BlueprintName = "hiboux"
-            ReferencedContainer = "container:hiboux.xcodeproj">
+            BuildableName = "Hiboux.app"
+            BlueprintName = "Hiboux"
+            ReferencedContainer = "container:Hiboux.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDAFC4CF181E6080001D5ECA"
-            BuildableName = "hiboux.app"
-            BlueprintName = "hiboux"
-            ReferencedContainer = "container:hiboux.xcodeproj">
+            BuildableName = "Hiboux.app"
+            BlueprintName = "Hiboux"
+            ReferencedContainer = "container:Hiboux.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDAFC4CF181E6080001D5ECA"
-            BuildableName = "hiboux.app"
-            BlueprintName = "hiboux"
-            ReferencedContainer = "container:hiboux.xcodeproj">
+            BuildableName = "Hiboux.app"
+            BlueprintName = "Hiboux"
+            ReferencedContainer = "container:Hiboux.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
