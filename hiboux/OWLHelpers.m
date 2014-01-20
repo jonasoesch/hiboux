@@ -112,7 +112,7 @@
     [context save:&error];
 }
 
-+ (void)deleteOwlatIndex:(int) index
++ (void)deleteOwlAtIndex:(int) index
 {
     OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];

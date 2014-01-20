@@ -256,7 +256,7 @@
     // Create the POST parameter
     NSString *post = [[NSString alloc] initWithFormat:@"owls=%@",jsonString];
 
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSData *postData = [post dataUsingEncoding:NSUnicodeStringEncoding allowLossyConversion:YES];
     
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
     
@@ -284,12 +284,11 @@
 }
 
 
-// Override to support editing the table view.
-// for swipe to delete
+// This method implements the swipe-to-delete behavior of tableView
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSLog(@"%ld", (long)indexPath.row);
-        [OWLHelpers deleteOwlatIndex:(int)indexPath.row];
+        [OWLHelpers deleteOwlAtIndex:(int)indexPath.row];
         [self updateOwls];
     }
 }

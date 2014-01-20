@@ -75,8 +75,6 @@
 
 - (IBAction)unwindToAddOwls:(UIStoryboardSegue *)unwindSegue
 {
-    OWLSelectionViewController *source = unwindSegue.sourceViewController;
-    
     [self.speciesButton setTitle: self.species forState:UIControlStateNormal];
 }
 
