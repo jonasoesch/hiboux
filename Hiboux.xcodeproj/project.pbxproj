@@ -21,7 +21,6 @@
 		DDAFC4E0181E6080001D5ECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4DF181E6080001D5ECA /* main.m */; };
 		DDAFC4E4181E6080001D5ECA /* OWLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4E3181E6080001D5ECA /* OWLAppDelegate.m */; };
 		DDAFC4E7181E6080001D5ECA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4E5181E6080001D5ECA /* Main_iPhone.storyboard */; };
-		DDAFC4ED181E6080001D5ECA /* OWLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC4EC181E6080001D5ECA /* OWLViewController.m */; };
 		DDAFC4EF181E6080001D5ECA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC4EE181E6080001D5ECA /* Images.xcassets */; };
 		DDAFC4F6181E6080001D5ECA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4F5181E6080001D5ECA /* XCTest.framework */; };
 		DDAFC4F7181E6080001D5ECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAFC4D3181E6080001D5ECA /* Foundation.framework */; };
@@ -66,8 +65,6 @@
 		DDAFC4E2181E6080001D5ECA /* OWLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWLAppDelegate.h; path = hiboux/OWLAppDelegate.h; sourceTree = "<group>"; };
 		DDAFC4E3181E6080001D5ECA /* OWLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OWLAppDelegate.m; path = hiboux/OWLAppDelegate.m; sourceTree = "<group>"; };
 		DDAFC4E6181E6080001D5ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		DDAFC4EB181E6080001D5ECA /* OWLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWLViewController.h; path = hiboux/OWLViewController.h; sourceTree = "<group>"; };
-		DDAFC4EC181E6080001D5ECA /* OWLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OWLViewController.m; path = hiboux/OWLViewController.m; sourceTree = "<group>"; };
 		DDAFC4EE181E6080001D5ECA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = hiboux/Images.xcassets; sourceTree = "<group>"; };
 		DDAFC4F4181E6080001D5ECA /* HibouxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HibouxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDAFC4F5181E6080001D5ECA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -113,8 +110,6 @@
 		075AF9CA184774EA00F6BEFF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDAFC4EB181E6080001D5ECA /* OWLViewController.h */,
-				DDAFC4EC181E6080001D5ECA /* OWLViewController.m */,
 				DD81E50F184390E30012FAED /* OWLListOwlsViewController.h */,
 				DD81E510184390E30012FAED /* OWLListOwlsViewController.m */,
 				DDDAADC618437B3E00517086 /* OWLAddOwlViewController.h */,
@@ -349,7 +344,6 @@
 				075AF9D5184780CE00F6BEFF /* Registration.m in Sources */,
 				DDB44F6718868C570018AE53 /* NYPopover.m in Sources */,
 				DD81E511184390E30012FAED /* OWLListOwlsViewController.m in Sources */,
-				DDAFC4ED181E6080001D5ECA /* OWLViewController.m in Sources */,
 				DDAFC4E4181E6080001D5ECA /* OWLAppDelegate.m in Sources */,
 				074D743C1886CD8E00761C42 /* OWLHelpers.m in Sources */,
 				DDB109AC186B3DB100C08FAD /* OWLSelectionViewController.m in Sources */,
