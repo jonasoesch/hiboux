@@ -304,6 +304,8 @@
 }
 
 
+// To dismis the keyboard when the user taps the background
+// there is one giant button behind everything which receives touch events
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
     
