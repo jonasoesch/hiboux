@@ -14,46 +14,50 @@
 @interface OWLAddOwlViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
 @property NSDate *timestamp;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *age;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *weather;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *ageControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *weatherControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexeControl;
 @property (weak, nonatomic) IBOutlet UIButton *speciesButton;
 @property (weak, nonatomic) IBOutlet NYSliderPopover *tempSlider;
-@property (weak, nonatomic) IBOutlet UITextField *no_ring;
-@property (weak, nonatomic) IBOutlet UITextField *weight;
-@property (weak, nonatomic) IBOutlet UITextField *wing_size;
-@property (weak, nonatomic) IBOutlet UITextField *tarse;
-@property (weak, nonatomic) IBOutlet UITextField *comment;
+@property (weak, nonatomic) IBOutlet UITextField *noRingField;
+@property (weak, nonatomic) IBOutlet UITextField *weightField;
+@property (weak, nonatomic) IBOutlet UITextField *wingSizeField;
+@property (weak, nonatomic) IBOutlet UITextField *tarseField;
+@property (weak, nonatomic) IBOutlet UITextField *commentField;
 
 @property UITextField *activeField;
 
-
-- (IBAction)done:(id)sender;
 
 @end
 
 @implementation OWLAddOwlViewController
 
+// This method is called when creating a new instance
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // No custom init code yet
     }
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
+    // Setup of the scroll view
+    // This is needed so it can scroll up when the keyboard is shown
+    // For now, it's the height of the 4 inch screen
+    // 3.5 inch works but is not properly supported
+    [self.scrolly setScrollEnabled:YES];
+    [self.scrolly setContentSize:CGSizeMake(320, 540)];
+    
+    // 
     OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     self.context = [appDelegate managedObjectContext];
     self.currentRegistration = [NSEntityDescription insertNewObjectForEntityForName:@"Registration" inManagedObjectContext:self.context];
-    
-    [self.scrolly setScrollEnabled:YES];
-    [self.scrolly setContentSize:CGSizeMake(320, 540)];
 
     
     NSString *lastOwlSpecies = [[OWLHelpers getLastOwl] valueForKey:@"Species"];
@@ -63,7 +67,7 @@
     
     NSString *lastOwlWeather = [[OWLHelpers getLastOwl] valueForKey:@"statusWeather"];
     NSUInteger lastOwlWeatherIndex = [[OWLHelpers weatherInfo] indexOfObject:lastOwlWeather];
-    [self.weather setSelectedSegmentIndex:lastOwlWeatherIndex];
+    [self.weatherControl setSelectedSegmentIndex:lastOwlWeatherIndex];
     
     NSNumber *lastOwlTemperature =[[OWLHelpers getLastOwl] valueForKey:@"temperature"];
     [self.tempSlider setValue:[lastOwlTemperature floatValue] animated:YES];
@@ -134,19 +138,19 @@
     // sexe (NSString)
     NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Femelle", nil];
     int selectedSex = [[self sexeControl] selectedSegmentIndex];
-    self.sexe = sexes[selectedSex];
-    [self.currentRegistration setValue: self.sexe forKey:@"sexe"];
+    NSString *sexe = sexes[selectedSex];
+    [self.currentRegistration setValue: sexe forKey:@"sexe"];
     
     
     // age (NSNumber)
-    int age = [[self age] selectedSegmentIndex];
+    int age = [[self ageControl] selectedSegmentIndex];
     age += 1;
     NSNumber *ageCorrect = [NSNumber numberWithInt:age];
     [self.currentRegistration setValue: ageCorrect forKey:@"age"];
     
     
     // statusWeather (NSString)
-    int temps = [self.weather selectedSegmentIndex];
+    int temps = [self.weatherControl selectedSegmentIndex];
     NSString *statusWeather = [OWLHelpers weatherInfo][temps];
     [self.currentRegistration setValue: statusWeather forKey:@"statusWeather"];
     
@@ -157,27 +161,27 @@
     
     
     // no_ring (NSString)
-    NSString *no_ring = self.no_ring.text;
+    NSString *no_ring = self.noRingField.text;
     [self.currentRegistration setValue: no_ring forKey:@"no_ring"];
     
     
     // weight (NSNumber)
-    NSNumber *weight = [formatter numberFromString:self.weight.text];
+    NSNumber *weight = [formatter numberFromString:self.weightField.text];
     [self.currentRegistration setValue: weight forKey:@"weight"];
     
     
     // wing_size (NSNumber)
-    NSNumber *wing_size = [formatter numberFromString:self.wing_size.text];
+    NSNumber *wing_size = [formatter numberFromString:self.wingSizeField.text];
     [self.currentRegistration setValue: wing_size forKey:@"wing_size"];
     
     
     // tarse (NSNumber)
-    NSNumber *tarse = [formatter numberFromString:self.tarse.text];
+    NSNumber *tarse = [formatter numberFromString:self.tarseField.text];
     [self.currentRegistration setValue: tarse forKey:@"tarse"];
     
     
     // comments (NSString)
-    NSString *comments = self.comment.text;
+    NSString *comments = self.commentField.text;
     [self.currentRegistration setValue:comments forKey:@"comments"];
     
     

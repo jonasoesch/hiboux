@@ -290,17 +290,17 @@
                     </scrollView>
                     <navigationItem key="navigationItem" id="PUG-al-egk"/>
                     <connections>
-                        <outlet property="age" destination="gJj-hS-wOp" id="aGL-lP-vyY"/>
-                        <outlet property="comment" destination="nri-Fu-KIU" id="MC5-2p-Huq"/>
-                        <outlet property="no_ring" destination="sBJ-F4-18C" id="mNZ-mi-8BG"/>
+                        <outlet property="ageControl" destination="gJj-hS-wOp" id="Bwh-HU-jwQ"/>
+                        <outlet property="commentField" destination="nri-Fu-KIU" id="Wsf-bb-yV0"/>
+                        <outlet property="noRingField" destination="sBJ-F4-18C" id="z9T-QT-hCM"/>
                         <outlet property="scrolly" destination="C6x-ua-yHD" id="sFg-48-VJ2"/>
                         <outlet property="sexeControl" destination="L5X-R7-F4x" id="J0I-KT-Nhw"/>
                         <outlet property="speciesButton" destination="MWF-J9-0rs" id="T4L-97-gK7"/>
-                        <outlet property="tarse" destination="kEj-NE-vHa" id="Ut1-NH-Ehd"/>
+                        <outlet property="tarseField" destination="kEj-NE-vHa" id="6y0-TV-JU6"/>
                         <outlet property="tempSlider" destination="94m-1r-HeZ" id="7Vz-Th-HiS"/>
-                        <outlet property="weather" destination="nGf-Os-ykU" id="Ezc-mm-Xoz"/>
-                        <outlet property="weight" destination="BgM-kY-2oL" id="bh2-4W-C6z"/>
-                        <outlet property="wing_size" destination="dmr-6U-aAw" id="AwS-bj-P1n"/>
+                        <outlet property="weatherControl" destination="nGf-Os-ykU" id="GkL-17-YQ7"/>
+                        <outlet property="weightField" destination="BgM-kY-2oL" id="HlQ-5J-iSf"/>
+                        <outlet property="wingSizeField" destination="dmr-6U-aAw" id="3pl-Ia-ClX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

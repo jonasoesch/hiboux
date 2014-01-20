@@ -12,8 +12,9 @@
 
 @interface OWLAddOwlViewController : UIViewController
 
+// Is public so the OWLlSelectionView can pass the name of the selected owl
 @property NSString *species;
-@property NSString *sexe;
+
 @property NSManagedObject *currentRegistration;
 @property NSManagedObjectContext *context;
 
