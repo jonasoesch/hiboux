@@ -262,7 +262,7 @@
     
     // Create the request
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://hibou.yoanngern.ch/test.php"]];
+    [request setURL:[NSURL URLWithString:@"http://hibou.yoanngern.ch/saveOwls.php"]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
