@@ -12,6 +12,8 @@
 
 @interface OWLHelpers : NSObject
 
+// All methods are public and static
+// because they are utility methods
 + (NSArray *)getOwls;
 + (NSArray *)speciesInfo;
 + (Registration *)getLastOwl;

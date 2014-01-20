@@ -11,6 +11,7 @@
 @implementation OWLHelpers
 
 
+// Re-usable function to get an array of all the owls from persistence.
 + (NSArray *)getOwls {
     OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -18,7 +19,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
     
-    
+    // Sort by timestamp descending
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
                                         initWithKey:@"timestamp" ascending:NO];
     [request setSortDescriptors:@[sortDescriptor]];
@@ -30,6 +31,8 @@
     
 }
 
+// To avoid duplication the canonical mapping between species, families and classes
+// is always loaded from this function
 + (NSArray *)speciesInfo {
     return
     @[
@@ -77,6 +80,7 @@
      ];
 }
 
+// get the last owl recorded
 + (Registration *)getLastOwl
 {
     NSArray *theOwls = [OWLHelpers getOwls];
@@ -89,11 +93,13 @@
     
 }
 
+// The canonical weather states
 + (NSArray *)weatherInfo
 {
     return @[@"sun", @"rain", @"cloudy", @"fog", @"period of sunshine", @"snow"];
 }
 
+// Utility function to remove all records from persistence
 + (void)deleteOwls
 {
     OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -112,6 +118,7 @@
     [context save:&error];
 }
 
+// Utility function to remove a record at a given index from persistence
 + (void)deleteOwlAtIndex:(int) index
 {
     OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
