@@ -1,6 +1,9 @@
 # Get’em Owl Client
 
 ## Installation
+Download or clone the repository. Open the XCode project. You should now be able to run the application in the iPhone Retina  (4-inch) simulator.
+
+In order to run the application on an iPhone, you need an Apple Developer Account for iOS which is paid. Please refer to the Apple Documentation on how to install your device and a provisioning profile for the application.
 
 ## Save data to database
 
