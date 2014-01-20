@@ -58,9 +58,12 @@
     [self.scrolly setContentSize:CGSizeMake(320, 540)];
     
 
+    // Re-Setting species, weather and temperature to the value they were for the last record
+    // Temperature and weather will probably not change during a session
+    // When an owl inhabits an area, it likely that there are more from the same species
     
     NSString *lastOwlSpecies = [[OWLHelpers getLastOwl] valueForKey:@"Species"];
-    lastOwlSpecies = (lastOwlSpecies != NULL) ? lastOwlSpecies : @"Chouette hulotte";
+    lastOwlSpecies = (lastOwlSpecies != NULL) ? lastOwlSpecies : [OWLHelpers speciesInfo][0][@"Species"];
     [self.speciesButton setTitle: lastOwlSpecies forState:UIControlStateNormal];
 
     
@@ -70,7 +73,6 @@
     
     NSNumber *lastOwlTemperature =[[OWLHelpers getLastOwl] valueForKey:@"temperature"];
     [self.tempSlider setValue:[lastOwlTemperature floatValue] animated:YES];
-    
     
     [self registerForKeyboardNotifications];
     
@@ -93,6 +95,15 @@
     // Creating a new object in persistence
     OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    [self saveCurrentViewToPersistenceWithContext:context];
+    
+}
+
+// Writes the state of UI elements to persistence
+- (void)saveCurrentViewToPersistenceWithContext:(NSManagedObjectContext *) context
+{
+    
     NSManagedObject *currentRegistration = [NSEntityDescription insertNewObjectForEntityForName:@"Registration" inManagedObjectContext:context];
     
     OWLAppDelegate *myAppDelegate = (OWLAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -132,11 +143,16 @@
             [currentRegistration setValue:[currSpecies valueForKey:@"Class" ] forKey:@"classe"];
         }
     }
-
+    
     
     // altitude (NSNumber)
-    NSNumber *altitude = [NSNumber numberWithInt:position.altitude];
-    [currentRegistration setValue: altitude forKey:@"altitude"];
+    // Not implemented. Because iOS doesn't handle altitude consistently
+    /* 
+    if (position.verticalAccuracy > 0) {
+        NSNumber *altitude = [NSNumber numberWithInt:position.altitude];
+    }
+    */
+    [currentRegistration setValue:NULL forKey:@"altitude"];
     
     
     // sexe (NSString)
@@ -190,7 +206,8 @@
     
     
     // locationName (NSString)
-    NSString *locationName = @"Mt Hiboux";
+    // Not implemented. Not feasible without user input or internet.
+    NSString *locationName = NULL;
     [currentRegistration setValue: locationName forKey:@"locationName"];
     
     
@@ -198,12 +215,14 @@
     
     NSError *error;
     [context save:&error];
-    
-    
+
     
 }
 
+
+
 -(void)viewWillDisappear:(BOOL)animated {
+    
     // unregister for keyboard notifications while not visible.
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                           name:UIKeyboardWillShowNotification
@@ -212,14 +231,17 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                           name:UIKeyboardWillHideNotification
                                           object:nil];
+    
     [super viewWillDisappear:animated];
 }
 
 
+// Show a label with the current value whenevert the slider is moved
 - (IBAction)tempSliderValueChanged:(id)sender {
     [self updateSliderPopoverText];
 }
 
+// Define what is shown in the slider label
 - (void)updateSliderPopoverText
 {
     self.tempSlider.popover.textLabel.text = [NSString stringWithFormat:@"%0.0f °C", self.tempSlider.value];
@@ -263,7 +285,8 @@
     self.activeField = nil;
 }
 
-// Call this method somewhere in your view controller setup code.
+// Called in viewDidLoad
+// Tells the viewController to call keyboardWasShown and keyboardWillBeHidden for the respective events
 - (void)registerForKeyboardNotifications
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -287,30 +310,5 @@
     [self.scrolly setScrollEnabled:YES];
     [self.scrolly setContentSize:CGSizeMake(320, 540)];
 }
-
-#pragma mark -
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    /*
-	if (textField == self.field1) {
-		[textField resignFirstResponder];
-		[self.field2 becomeFirstResponder];
-		return NO;
-	}
-	else if (textField == self.field2) {
-		[textField resignFirstResponder];
-		[self.field3 becomeFirstResponder];
-		return NO;
-	}
-	else {
-		[textField resignFirstResponder];
-		return YES;
-	}
-     */
-    return YES;
-}
-
-
 
 @end
