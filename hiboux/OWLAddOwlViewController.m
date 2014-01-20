@@ -12,8 +12,11 @@
 #import "OWLHelpers.h"
 
 @interface OWLAddOwlViewController ()
-@property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
+
 @property NSDate *timestamp;
+
+// References to the different UI Elements in the Storyboard
+@property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *ageControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *weatherControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sexeControl;
@@ -54,10 +57,6 @@
     [self.scrolly setScrollEnabled:YES];
     [self.scrolly setContentSize:CGSizeMake(320, 540)];
     
-    // 
-    OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    self.context = [appDelegate managedObjectContext];
-    self.currentRegistration = [NSEntityDescription insertNewObjectForEntityForName:@"Registration" inManagedObjectContext:self.context];
 
     
     NSString *lastOwlSpecies = [[OWLHelpers getLastOwl] valueForKey:@"Species"];
@@ -91,6 +90,11 @@
 // Add an Owl
 - (IBAction)done:(id)sender {
     
+    // Creating a new object in persistence
+    OWLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSManagedObject *currentRegistration = [NSEntityDescription insertNewObjectForEntityForName:@"Registration" inManagedObjectContext:context];
+    
     OWLAppDelegate *myAppDelegate = (OWLAppDelegate *)[[UIApplication sharedApplication] delegate];
     CLLocation *position = myAppDelegate.locationManager.location;
     
@@ -100,19 +104,19 @@
     
     // timestamp (NSDate)
     NSDate *today = [NSDate date];
-    [self.currentRegistration setValue: today forKey:@"timestamp"];
+    [currentRegistration setValue: today forKey:@"timestamp"];
     
     
     // coorX (NSNumber)
     double latitude = position.coordinate.latitude;
     NSNumber *coorX = [NSNumber numberWithDouble:latitude];
-    [self.currentRegistration setValue: coorX forKey:@"coorX"];
+    [currentRegistration setValue: coorX forKey:@"coorX"];
     
     
     // coorY (NSNumber)
     double longitude = position.coordinate.longitude;
     NSNumber *coorY = [NSNumber numberWithDouble:longitude];
-    [self.currentRegistration setValue: coorY forKey:@"coorY"];
+    [currentRegistration setValue:coorY forKey:@"coorY"];
     
     
     // Species
@@ -120,78 +124,80 @@
     // Class
     NSString *species = [[self.speciesButton titleLabel] text];
     NSArray *speciesInfo = [OWLHelpers speciesInfo];
-    [self.currentRegistration setValue:species forKey:@"Species"];
+    [currentRegistration setValue:species forKey:@"Species"];
     
     for (NSArray *currSpecies in speciesInfo) {
         if([[currSpecies valueForKey:@"Species" ] isEqualToString:species]) {
-            [self.currentRegistration setValue:[currSpecies valueForKey:@"Family" ] forKey:@"family"];
-            [self.currentRegistration setValue:[currSpecies valueForKey:@"Class" ] forKey:@"classe"];
+            [currentRegistration setValue:[currSpecies valueForKey:@"Family" ] forKey:@"family"];
+            [currentRegistration setValue:[currSpecies valueForKey:@"Class" ] forKey:@"classe"];
         }
     }
 
     
     // altitude (NSNumber)
     NSNumber *altitude = [NSNumber numberWithInt:position.altitude];
-    [self.currentRegistration setValue: altitude forKey:@"altitude"];
+    [currentRegistration setValue: altitude forKey:@"altitude"];
     
     
     // sexe (NSString)
     NSArray *sexes = [NSArray arrayWithObjects:@"Male", @"Femelle", nil];
     int selectedSex = [[self sexeControl] selectedSegmentIndex];
     NSString *sexe = sexes[selectedSex];
-    [self.currentRegistration setValue: sexe forKey:@"sexe"];
+    [currentRegistration setValue: sexe forKey:@"sexe"];
     
     
     // age (NSNumber)
     int age = [[self ageControl] selectedSegmentIndex];
     age += 1;
     NSNumber *ageCorrect = [NSNumber numberWithInt:age];
-    [self.currentRegistration setValue: ageCorrect forKey:@"age"];
+    [currentRegistration setValue: ageCorrect forKey:@"age"];
     
     
     // statusWeather (NSString)
     int temps = [self.weatherControl selectedSegmentIndex];
     NSString *statusWeather = [OWLHelpers weatherInfo][temps];
-    [self.currentRegistration setValue: statusWeather forKey:@"statusWeather"];
+    [currentRegistration setValue: statusWeather forKey:@"statusWeather"];
     
     
     // temperature (NSNumber)
     NSNumber *temperature = [NSNumber numberWithFloat:self.tempSlider.value];
-    [self.currentRegistration setValue: temperature forKey:@"temperature"];
+    [currentRegistration setValue: temperature forKey:@"temperature"];
     
     
     // no_ring (NSString)
     NSString *no_ring = self.noRingField.text;
-    [self.currentRegistration setValue: no_ring forKey:@"no_ring"];
+    [currentRegistration setValue: no_ring forKey:@"no_ring"];
     
     
     // weight (NSNumber)
     NSNumber *weight = [formatter numberFromString:self.weightField.text];
-    [self.currentRegistration setValue: weight forKey:@"weight"];
+    [currentRegistration setValue: weight forKey:@"weight"];
     
     
     // wing_size (NSNumber)
     NSNumber *wing_size = [formatter numberFromString:self.wingSizeField.text];
-    [self.currentRegistration setValue: wing_size forKey:@"wing_size"];
+    [currentRegistration setValue: wing_size forKey:@"wing_size"];
     
     
     // tarse (NSNumber)
     NSNumber *tarse = [formatter numberFromString:self.tarseField.text];
-    [self.currentRegistration setValue: tarse forKey:@"tarse"];
+    [currentRegistration setValue: tarse forKey:@"tarse"];
     
     
     // comments (NSString)
     NSString *comments = self.commentField.text;
-    [self.currentRegistration setValue:comments forKey:@"comments"];
+    [currentRegistration setValue:comments forKey:@"comments"];
     
     
     // locationName (NSString)
     NSString *locationName = @"Mt Hiboux";
-    [self.currentRegistration setValue: locationName forKey:@"locationName"];
+    [currentRegistration setValue: locationName forKey:@"locationName"];
     
+    
+    NSLog(@"%@", currentRegistration);
     
     NSError *error;
-    [self.context save:&error];
+    [context save:&error];
     
     
     

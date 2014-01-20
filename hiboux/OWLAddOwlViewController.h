@@ -15,8 +15,5 @@
 // Is public so the OWLlSelectionView can pass the name of the selected owl
 @property NSString *species;
 
-@property NSManagedObject *currentRegistration;
-@property NSManagedObjectContext *context;
-
 
 @end
