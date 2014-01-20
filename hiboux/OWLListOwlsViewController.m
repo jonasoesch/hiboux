@@ -94,8 +94,6 @@
 
 // Called when the send button is pressed
 - (IBAction)send:(id)sender {
-
-    NSLog(@"Send");
     
     [self saveJSON];
     
@@ -255,7 +253,7 @@
     
     // Create the POST parameter
     NSString *post = [[NSString alloc] initWithFormat:@"owls=%@",jsonString];
-    NSLog(@"%@", jsonString);
+    NSLog(@"JSON sent: %@", jsonString);
 
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     

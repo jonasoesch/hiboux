@@ -211,7 +211,7 @@
     [currentRegistration setValue: locationName forKey:@"locationName"];
     
     
-    NSLog(@"%@", currentRegistration);
+    NSLog(@"Save record: %@", currentRegistration);
     
     NSError *error;
     [context save:&error];
@@ -220,7 +220,8 @@
 }
 
 
-
+// called when another view is about to be shown.
+// events shouldn't be handled by this view anymore
 -(void)viewWillDisappear:(BOOL)animated {
     
     // unregister for keyboard notifications while not visible.
@@ -236,7 +237,7 @@
 }
 
 
-// Show a label with the current value whenevert the slider is moved
+// Show a label with the current value whenever the slider is moved
 - (IBAction)tempSliderValueChanged:(id)sender {
     [self updateSliderPopoverText];
 }
@@ -253,12 +254,13 @@
     NSDictionary* info = [aNotification userInfo];
     CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
+    // Define the view area when keyboard is shown
+    // 40 is a value that has been found by trial and works well with the height of the text fields
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height+40, 0.0);
     self.scrolly.contentInset = contentInsets;
     self.scrolly.scrollIndicatorInsets = contentInsets;
     
     // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your app might not need or want this behavior.
     CGRect aRect = self.view.frame;
     aRect.size.height -= keyboardSize.height+40;
     if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
@@ -275,11 +277,13 @@
 }
 
 
+// Save the text field we're editing for later use
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     self.activeField = textField;
 }
 
+// Reset the instance variable
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     self.activeField = nil;

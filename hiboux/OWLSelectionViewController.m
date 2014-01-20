@@ -28,7 +28,8 @@
     return self;
 }
 
-//  
+// When the view is loaded we get all the the species from our canonical source
+// they are then kept in an instance variable
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,29 +40,30 @@
     for (int i = 0; i<[speciesInfo count]; i++) {
         [speciesArray addObject:speciesInfo[i][@"Species"]];
     }
-    NSLog(@"%@", speciesArray);
-    self.species =speciesArray;
+    self.species = speciesArray;
 }
 
+// Apple template functions
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
+// We don't want sections in our tableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
+// Can use the species array to tell the tableView how many rows to render
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.species count];
 }
 
+// Getting the name of the species from the species instance variable to show at a given row
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"SpeciesSelection";
@@ -72,9 +74,9 @@
 }
 
 
-#pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
+// When the view is about to be dismissed, we set the species instance variable of
+// the destination view (OWLAddView) to the selected species.
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     OWLAddOwlViewController *addView = (OWLAddOwlViewController *) segue.destinationViewController;
